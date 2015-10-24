@@ -36,3 +36,5 @@ Mission Statement:
 			Put single picture on google maps
 			Overlay large image onto google maps
 			
+Helpfull sites:
+http://www.xheli.com/05p-flightcontrol-mega-mx.html
