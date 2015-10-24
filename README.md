@@ -2,8 +2,37 @@ Readme file for the Drone group
 ========================================
 Mission Statement: 
 
-Phase one: to deliver a beer based off GPS concordance and deliver it to a set location.  
-
-Phase two: using the camera located on the drone, take photos of the ground and using the Google Maps API create a simple topography map. 
-
-Phase three: To be determined based off the success of phases two or three. 
+	Project	
+	 Deliverables	
+	  Requirements
+	
+	Deliever a Beer		
+		Get Drone and Computer Comunicating	
+			Download software
+			Establish Communication link
+			
+		Automate Flight	
+			Take off and land
+			Lift off and rotate
+			Fly x feet and fly back
+			Fly to GPS cordinates and back
+			
+		Deliver beer	
+			Manually lift and fly beer
+			Fly and retriever beer
+			Drink Beer
+			
+	Google Map Overlay		
+		Take Picture	
+			Take a picture
+			Upload picture to computer
+			Figure scale on picture
+		Picture manipulation	
+			Get meta data off pictures - GPS/Altitudes
+			Stich pictures together
+			Scale and layer pictures to make single image
+			
+		Map Overlay	
+			Put single picture on google maps
+			Overlay large image onto google maps
+			
