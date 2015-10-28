@@ -6,8 +6,8 @@ Mission Statement:
 	 Deliverables	
 	  Requirements
 	
-	Deliever a Beer		
-		Get Drone and Computer Comunicating	
+	Deliver a Beer		
+		Get Drone and Computer Communicating	
 			Download software
 			Establish Communication link
 			
@@ -15,7 +15,7 @@ Mission Statement:
 			Take off and land
 			Lift off and rotate
 			Fly x feet and fly back
-			Fly to GPS cordinates and back
+			Fly to GPS coordinates and back
 			
 		Deliver beer	
 			Manually lift and fly beer
@@ -28,7 +28,7 @@ Mission Statement:
 			Upload picture to computer
 			Figure scale on picture
 		Picture manipulation	
-			Get meta data off pictures - GPS/Altitudes
+			Get metadata off pictures - GPS/Altitudes
 			Stich pictures together
 			Scale and layer pictures to make single image
 			
@@ -36,5 +36,5 @@ Mission Statement:
 			Put single picture on google maps
 			Overlay large image onto google maps
 			
-Helpfull sites:
+Helpful sites:
 http://www.xheli.com/05p-flightcontrol-mega-mx.html
