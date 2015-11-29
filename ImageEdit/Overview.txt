@@ -1,5 +1,8 @@
 This is an overview for the ImageEdit code that will combine our map images into a master images
 
+--Images are saved to my desktop on campus. No idea how to upload images to this shit show. 
+
+
 Must have core requirements:
 1.	Loads a series of images to program memory.
 2.	Figures out the orientation that the images were taken from on the drone.
