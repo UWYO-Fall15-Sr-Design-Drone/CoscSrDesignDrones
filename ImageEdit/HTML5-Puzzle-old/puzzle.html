@@ -1,0 +1,323 @@
+This is some unfinished code that I wrote about a year ago. Takes in an image and converts it to a puzzle. 
+Scrapping some of my old work, just uploading it incase I need some info form it. 
+
+NOTE needs the puzzleImage + border to run. Don't think it runs in IE. 
+Should dynamically figure everything else out. 
+
+
+----------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+		<meta charset="UTF-8">
+	<head>
+	<div id="puzzle">
+	<script type="text/javascript">
+	var _canvas;
+	var _backgroundImage;
+	var _border;
+	var _stage;
+
+	//Setting up variables for a puzzle board.
+	var _mainImage;
+	var _puzzlePieces;
+	var _canvasWidth;
+	var _canvasHight;
+	var _puzzlePieceWidth;
+	var _puzzlePieceHight;
+	var _secondGame = false;
+
+	//Border size settings
+	var _borderWidth;	
+	var _borderHight;
+
+	//Variables for the puzzle piece currently being touched.
+	var _currentPiece;
+	var _currentLastPiece;
+	var _mouse;
+
+	//Game Settings
+	//Difficulty is x * x. 
+	var _difficulty = 4;
+
+	/**
+	*	The initializing funtion called when the program is run.
+	*/
+	function main(){
+		_mainImage = new Image();
+		_mainImage.addEventListener('load', loadImage,false);
+		_mainImage.src = "puzzleImage.JPG";
+		_border = new Image();
+		_border.addEventListener('load', loadImage,false);
+		_border.src = "border.jpg";
+
+	}
+
+	/**
+	*	Resets everything, runs main. 
+	*/
+	function quitGame(){
+		document.onmousedown = null;
+		document.onmouseup	 = null;
+		document.onmousemove = null;
+		initializePuzzle();
+	}
+
+	/**
+	*	Uses the info from the called image.
+	*	Uses this to caculate the piece/board size. 
+	*/
+	function loadImage(image){
+		_puzzlePieceWidth = Math.floor(_mainImage.width / _difficulty)
+		_puzzlePieceHight = Math.floor(_mainImage.height / _difficulty)
+
+		_canvasWidth = _puzzlePieceWidth * _difficulty;
+		_canvasHight = _puzzlePieceHight * _difficulty;
+
+		_border.width  = _puzzlePieceWidth;
+		_border.height = _puzzlePieceHight;
+
+		loadCanvas();
+		initializePuzzle();
+	}
+
+	/**
+	*	Set the cavas size and stage size. 
+	*/
+	function loadCanvas(){
+		_canvas = document.getElementById('canvas');		
+		_stage	= _canvas.getContext('2d');
+
+		_canvas.width  = _canvasWidth + 400;
+		_canvas.height = _canvasHight + 400;
+
+
+		_canvas.style.border = "1px solid black, -400, -400";
+	}
+
+	/**
+	*	Initializing and draws the puzzle board
+	*	Drops the pieces into the array. 6
+	*	Calls buildPieces
+	*/
+	function initializePuzzle(){
+		//Main puzzle board array
+		_puzzlePieces = [];
+		//Holds mouse postion
+		_mouse = {x:0,y:0};
+
+		//Setting the current puzzle state to null.
+		_currentPiece = null;
+		_currentLastPiece = null;
+
+		//Draw the stage, moves img. 
+//		_stage.drawImage(_mainImage, 
+//			0, 0, 	 _canvasWidth, _canvasHight, 
+//			200, 200,_canvasWidth, _canvasHight);
+		
+		//Adds the title to the board
+		if(_secondGame == true){
+			//createBoardTitle("Click to play again!");
+		}
+		else{
+			//createBoardTitle("Click to Start!");
+			_secondGame = true;
+		}
+
+		//Add the puzzle pieces
+		createPuzzlePieces();
+	}
+
+	/**
+	*	Adds the title to the puzzle board. 
+	*/
+	function createBoardTitle(string){
+		//Fills the stage with black and sets to 50% transparency
+		_stage.fillStyle 	= '#000000'
+		_stage.globalAlpha	= .5;
+
+		_stage.fillRect(100, _canvasPuzzleHight - 40, _canvasPuzzleWidth - 200, 40);
+		_stage.fillStyle 	= "#FFFFFF";
+		_stage.globalAlpha 	= 1;
+		_stage.textAlign 	= "center";
+		_stage.textBaseline = "middle";
+		_stage.font 		= "20px Arial";
+		_stage.fillText(string,_canvasPuzzleWidth / 2,_canvasPuzzleHight- 20);
+
+	}
+
+
+	/**
+	*	Adds the puzzle pieces to the board.
+	*/
+	function createPuzzlePieces(){
+		var i;
+		var localPiece;
+		var xPos = 0;
+		var yPos = 0;
+
+		for(i = 0; i < _difficulty * _difficulty; i++){
+			localPiece = {};
+			localPiece.sx = xPos;
+			localPiece.sy = yPos;
+
+
+			_stage.drawImage(_mainImage, 
+						localPiece.sx, localPiece.sy,
+					_puzzlePieceWidth, _puzzlePieceHight,
+						xPos + 200, yPos +200, 
+					_puzzlePieceWidth, _puzzlePieceHight)
+
+
+			//add it to the main array
+			_puzzlePieces.push(localPiece);
+			//Setting the X and y for each puzzle piece. 
+			xPos += _puzzlePieceWidth;
+			//Checking to see if we need to go to a new row
+			if(xPos >= _canvasWidth){
+				xPos = 0;
+				yPos += _puzzlePieceHight;
+			}
+		}
+		//Adds a mouse listener, shuffles on click
+		addBoarder();
+		document.onmousedown = shufflesPuzzle;
+	}
+
+	/**
+	*Adds a boarder to the puzzle
+	*TODO Rewrite this code. Could be made into 1 loop.
+	*/
+	function addBoarder() {
+
+		//Set size of border "chunks"
+		_borderWidth = _puzzlePieceWidth;
+		_borderHight = _puzzlePieceHight;
+
+		//Starting location in the upper left corner
+		var xPos = 200 - (_puzzlePieceWidth * 2);
+		var yPos = 200 - _puzzlePieceHight;
+
+		//Just going left for the top row.
+		for(i = 0; i < _difficulty + 2; i++){
+			//Update location
+			xPos = xPos + _puzzlePieceWidth;
+			//Draw the boarder
+			_stage.drawImage(_border,
+				_borderWidth, _borderHight,
+				_borderWidth, _borderHight,
+				xPos, yPos,
+				_borderWidth, _borderHight);
+		}
+
+		//Drawing left side. 
+		//Don't want to draw the first tile again. 
+		xPos = 200 - _puzzlePieceWidth;
+		yPos = 200 - (_puzzlePieceHight * 2) + _puzzlePieceHight;
+
+		for(i = 0; i < _difficulty + 1; i++){
+			//Update location
+			yPos = yPos + _puzzlePieceHight;
+			//Draw the boarder
+			_stage.drawImage(_border,
+				_borderWidth, _borderHight,
+				_borderWidth, _borderHight,
+				xPos, yPos,
+				_borderWidth, _borderHight);
+		}
+
+		//Drawing bottom
+		//Not updated x/y because we know it is currently
+		//at the very bottom left cornor. 
+		for(i = 0; i < _difficulty + 1; i++){
+			//Update location
+			xPos = xPos + _puzzlePieceWidth;
+			//Draw the boarder
+			_stage.drawImage(_border,
+				_borderWidth, _borderHight,
+				_borderWidth, _borderHight,
+				xPos, yPos,
+				_borderWidth, _borderHight);
+		}
+
+		//Going up from the bottom right cornor. 
+		for(i = 0; i < _difficulty; i++){
+			//Update location
+			yPos = yPos - _puzzlePieceHight;
+			//Draw the boarder
+			_stage.drawImage(_border,
+				_borderWidth, _borderHight,
+				_borderWidth, _borderHight,
+				xPos, yPos,
+				_borderWidth, _borderHight);
+		}
+
+
+
+
+
+	}
+	/**
+	*	Shuffles the board. Can be called as needed. 
+	*/
+	function shufflesPuzzle(){
+		//Calls the shuffleArray funtion
+		_puzzlePieces = shuffleArray(_puzzlePieces);
+		//Clears the canvas
+		_stage.clearRect(0,0,_canvasWidth,_canvasHight);
+
+		var i;
+		var localPiece;
+		var xPos = 0;
+		var yPos = 0;
+
+		//Shuffles! 
+		for(i = 0; i < _puzzlePieces.length; i++){
+			//Pulls out a piece
+			localPiece = _puzzlePieces[i];
+			localPiece.xPos = xPos;
+			localPiece.yPos = yPos;
+
+			//Puts the image onto the board
+			_stage.drawImage(_mainImage, 
+								localPiece.sx, localPiece.sy,
+								_puzzlePieceWidth, _puzzlePieceHight,
+								xPos + 200, yPos + 200, 
+								_puzzlePieceWidth, _puzzlePieceHight)
+
+			//Updates location
+			xPos += _puzzlePieceWidth;
+			//Checks to make sure it's a valid location
+			if(xPos >= _canvasWidth){
+				xPos = 0;
+				yPos += _puzzlePieceHight;
+			}
+		}
+		addBoarder();
+		//Adds a mouse listener,
+		//document.onmousedown = onClick;
+	}
+
+	/**
+	*	Helper Funtion, just shuffles the array
+	*/
+	function shuffleArray(array){
+		for(var j, x, i = array.length; i; 
+			j = parseInt(Math.random() * i), 
+			x = array[--i], array[i] = array[j], array[j] = x);
+		return array; 
+	}
+
+	</script>
+	</div>
+	<body onload="main();">
+		<canvas id="canvas"></canvas>
+		<br>
+		<p>TODO add reset shuffle button
+		http://code.tutsplus.com/tutorials/create-an-html5-canvas-tile-swapping-puzzle--active-10747
+	</p>
+	</body>
+</html>
