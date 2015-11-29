@@ -1,5 +1,7 @@
 This is an overview for the ImageEdit code that will combine our map images into a master images
 
+¡More up to date info is at the bottom!
+
 --Images are saved to my desktop on campus. No idea how to upload images 
 
 
