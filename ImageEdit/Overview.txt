@@ -19,3 +19,5 @@ Things to keep in mind:
 		-Could use the GPS info from the photo? This needs to be looked at
 -Might have to go inside the flight planner config file, scrape and parse that data to figure out how the images were taken in relation to the flight path. 
 
+(Look at this link later)
+http://www.w3resource.com/html5-canvas/html5-canvas-compositing.php
