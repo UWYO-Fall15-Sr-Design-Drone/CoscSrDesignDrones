@@ -1,0 +1,21 @@
+This is an overview for the ImageEdit code that will combine our map images into a master images
+
+Must have core requirements:
+1.	Loads a series of images to program memory.
+2.	Figures out the orientation that the images were taken from on the drone.
+3.	Combines images onto a single page 
+
+Secondary program design goals:
+1.	A basic API so that the app on the phone can simply pass the program the images and a config file to worth with. 
+2.	A transparency fade between map images. 
+
+“Nice to have” design ideas:
+1.	Run everything from a config file so that other programs may edit that instead of running the imageEdit program. 
+2.	Pull basic GPS info off the images and parse their data. 
+
+
+Things to keep in mind: 
+	-We are going to have to figure out the orientation that the image was taken from
+		-Could use the GPS info from the photo? This needs to be looked at
+-Might have to go inside the flight planner config file, scrape and parse that data to figure out how the images were taken in relation to the flight path. 
+
