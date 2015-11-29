@@ -21,3 +21,16 @@ Things to keep in mind:
 
 (Look at this link later)
 http://www.w3resource.com/html5-canvas/html5-canvas-compositing.php
+
+
+
+
+Problem: Javascript can't touch things it doesn't know about it. 
+No way to handle to do an directory listing on a folder and pull the images in. 
+What we can do, because we were talking about doing this on a webserver is first running a unix command
+something like "ls | grep .jpg > imageDir.txt" should pull all our images from the current directory and 
+save the list to a folder. Could run this all with a simple bash script too. 
+
+Then we know for a fact that this file will always exists we can build a parser inside the Javascript code to to run like: var _image+count.scr.load(x,y) to dynamically pull this stuff in. 
+
+This idea could fail here. Don't know if Javascript can dynamically add new vars. 
