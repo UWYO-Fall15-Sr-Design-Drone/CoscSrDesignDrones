@@ -1,0 +1,25 @@
+Problem: Low resolution, inacurate, and infrequently updated satilite area maps.
+
+Solution: High resolution topographical mapping of an area using a fully automated drone photography system.
+
+Project: Map an area
+	
+	Deliverable: Take pictures from phone mounted to drone.
+		
+		Task: Build phone harness for drone.
+		
+		Task: Build app to take pictures.
+		
+		Task: Set up server to receive and manipulate data from phone.
+		
+	Deliverable: Controll drone from phone.
+	
+		Task: Receive data from drone to phone.
+		
+		Task: Update drone data from phone.
+		
+		Task: Fly drone from phone.
+		
+Need: App for taking pictures.
+	: Server to receive data to database.
+	: Bluetooth communication device for drone. 
