@@ -7,17 +7,17 @@ Use Case: 1 Automate Flight
 
 **CHARACTERISTIC INFORMATION** 
   
-Goal in Context: Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from    
-Scope: Company  
-Level: Summary  
+**Goal in Context:** Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from    
+**Scope:** Company  
+**Level:** Summary  
 **Preconditions:** Batteries are fully charged on Drone.       
-Success End Condition: Drone flies without control, everyone drinks happily.   
-Failed End Condition: Drone needs retrieval, everyone drinks sadly.    
-Primary Actor: Drone, APX flight controller board.     
-Trigger: Button on RC Controller is toggled on.    
+**Success End Condition:** Drone flies without control, everyone drinks happily.   
+**Failed End Condition:** Drone needs retrieval, everyone drinks sadly.    
+**Primary Actor:** Drone, APX flight controller board.     
+**Trigger:** Button on RC Controller is toggled on.    
   
   
-MAIN SUCCESS SCENARIO
+**MAIN SUCCESS SCENARIO**
    -	   	1. Button is toggled on.  
    -	   	2. Drone initiates startup check.  
    -    	3. Drone takes off and flies 20 feet into the air.   
@@ -30,37 +30,38 @@ MAIN SUCCESS SCENARIO
    
        
           
-EXTENSIONS  
+**EXTENSIONS**  
 		•	2a. Drone fails initial startup check. 
 			o	2.a1 Power off and on Drone, try again.   
-SUB-VARIATIONS   
+**SUB-VARIATIONS**   
 		•	2a. Drone fails pre-setup check.    
-RELATED INFORMATION    
-Priority: top    
-Performance Target: 5-minutes max    
-Frequency: 5 times for testing   
-Superordinate Use Case:     
-Subordinate Use Cases:    
-Channel to primary actor: Drone    
-Secondary Actors: RC Controller.    
-Channels to Secondary Actors:    
-OPEN ISSUES   
+**RELATED INFORMATION**    
+**Priority:** top    
+**Performance Target:** 5-minutes max    
+**Frequency:** 5 times for testing   
+**Superordinate Use Case:**     
+**Subordinate Use Cases:**    
+**Channel to primary actor:** Drone    
+**Secondary Actors:** RC Controller.    
+**Channels to Secondary Actors:**    
+**OPEN ISSUES**   
 		•	What happens if the Drone goes off course?     
 		•	What happens if the drone crashes into something?    
-SCHEDULE   
-Due Date: January 15, 2016   
+**SCHEDULE**   
+**Due Date:** January 15, 2016   
 
-Use Cases    
-Use Case: 2 Automated User Mapping    
-CHARACTERISTIC INFORMATION    
-Goal in Context: A user sets the flight zone and other configurable from mobile device. Upon a successful flight a map of the flight zone will be returned to the user.    
-Scope: Company     
-Level: Primary task     
-Preconditions: Drone and phone both have charged batteries.    
-Success End Condition: User has high resolution map of area.   
-Failed End Condition: User has no map.    
-Primary Actor: Drone and User.     
-Trigger: Start button on users app.    
+**Use Cases**    
+**Use Case:** 2 Automated User Mapping    
+
+**CHARACTERISTIC INFORMATION**    
+**Goal in Context:** A user sets the flight zone and other configurable from mobile device. Upon a successful flight a map of the flight zone will be returned to the user.    
+**Scope:** Company     
+**Level:** Primary task     
+**Preconditions:** Drone and phone both have charged batteries.    
+**Success End Condition:** User has high resolution map of area.   
+**Failed End Condition:** User has no map.    
+**Primary Actor:** Drone and User.     
+**Trigger:** Start button on users app.    
 MAIN SUCCESS SCENARIO     
 		1.	User sets map and accepts user’s agreement.   
 		2.	User attaches phone to drone.   
