@@ -37,10 +37,10 @@ Readme file for the Drone group
 **Performance Target:** 5-minutes max    
 **Frequency:** 5 times for testing   
 **Superordinate Use Case:**     
-**Subordinate Use Cases: **   
-**Channel to primary actor: **Drone    
+**Subordinate Use Cases:**   
+**Channel to primary actor:** Drone    
 **Secondary Actors:** RC Controller.    
-**Channels to Secondary Actors:  **  
+**Channels to Secondary Actors:**  
 ###OPEN ISSUES   
 		•	What happens if the Drone goes off course?     
 		•	What happens if the drone crashes into something?    
