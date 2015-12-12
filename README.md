@@ -1,33 +1,32 @@
 Readme file for the Drone group
 ========================================
-Use Cases:
-	Use Case 1:
-	Characteristic Information
+
 
 Use Cases  
 Use Case: 1 Automate Flight  
-CHARACTERISTIC INFORMATION   
+
+**CHARACTERISTIC INFORMATION** 
   
 Goal in Context: Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from    
 Scope: Company  
 Level: Summary  
-Preconditions: Batteries are fully charged on Drone.       
+**Preconditions:** Batteries are fully charged on Drone.       
 Success End Condition: Drone flies without control, everyone drinks happily.   
 Failed End Condition: Drone needs retrieval, everyone drinks sadly.    
 Primary Actor: Drone, APX flight controller board.     
 Trigger: Button on RC Controller is toggled on.    
   
   
-MAIN SUCCESS SCENARIO   
-      1.  	Button is toggled on.  
-      2. 	Drone initiates startup check.  
-      3. 	Drone takes off and flies 20 feet into the air.   
-      4. 	Drone hoovers for 5 seconds.    
-      5. 	Drone flies forward 15 feet.    
-      6. 	Drone flies backwards for 5 feet.     
-      7. 	Drone spins around to face takeoff pad.    
-      8. 	Drone flies forward 10 feet to pad.    
-      9.        Drone lands.      
+MAIN SUCCESS SCENARIO
+   -	   	1. Button is toggled on.  
+   -	   	2. Drone initiates startup check.  
+   -    	3. Drone takes off and flies 20 feet into the air.   
+   -    	4. Drone hoovers for 5 seconds.    
+   -    	5. Drone flies forward 15 feet.    
+   -    	6. Drone flies backwards for 5 feet.     
+   -    	7. Drone spins around to face takeoff pad.    
+   -    	8. Drone flies forward 10 feet to pad.    
+   -            9. Drone lands.      
    
        
           
