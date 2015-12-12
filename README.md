@@ -1,5 +1,8 @@
 Readme file for the Drone group
 ========================================
+Readme file for the Drone group
+========================================
+'<code>'
 Use Cases
 Use Case: 1 Automate Flight
 CHARACTERISTIC INFORMATION
@@ -98,8 +101,7 @@ OPEN ISSUES
 		•	What if the server becomes unreachable?
 SCHEDULE
 Due Date: February 1, 2016
-
-
+'<\code>'
 ========================================
 Mission Statement: 
 
