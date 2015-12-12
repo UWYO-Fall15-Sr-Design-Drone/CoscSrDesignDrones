@@ -100,9 +100,6 @@ SCHEDULE
 Due Date: February 1, 2016
 
 
-
-
-
 ========================================
 Mission Statement: 
 
