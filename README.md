@@ -54,8 +54,8 @@ Channels to Secondary Actors:
 **Scope:** Company     
 **Level:** Primary task     
 **Preconditions:** Drone and phone both have charged batteries.    
-Success End Condition:** User has high resolution map of area.   
-Failed End Condition:** User has no map.    
+**Success End Condition:** User has high resolution map of area.   
+**Failed End Condition:** User has no map.    
 **Primary Actor:** Drone and User.     
 **Trigger:** Start button on users app.    
 
