@@ -33,14 +33,14 @@ Readme file for the Drone group
 ###SUB-VARIATIONS   
 		•	2a. Drone fails pre-setup check.    
 ###RELATED INFORMATION    
-Priority: top    
-Performance Target: 5-minutes max    
-Frequency: 5 times for testing   
-Superordinate Use Case:     
-Subordinate Use Cases:    
-Channel to primary actor: Drone    
-Secondary Actors: RC Controller.    
-Channels to Secondary Actors:    
+**Priority:** top    
+**Performance Target:** 5-minutes max    
+**Frequency:** 5 times for testing   
+**Superordinate Use Case:**     
+**Subordinate Use Cases: **   
+**Channel to primary actor: **Drone    
+**Secondary Actors:** RC Controller.    
+**Channels to Secondary Actors:  **  
 ###OPEN ISSUES   
 		•	What happens if the Drone goes off course?     
 		•	What happens if the drone crashes into something?    
