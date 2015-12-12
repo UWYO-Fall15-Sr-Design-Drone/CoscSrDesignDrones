@@ -2,14 +2,14 @@ Readme file for the Drone group
 ========================================
 Readme file for the Drone group
 ========================================
-'<code>'
-Use Cases
-Use Case: 1 Automate Flight
-CHARACTERISTIC INFORMATION
 
-Goal in Context: Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from
-Scope: Company
-Level: Summary
+Use Cases  
+Use Case: 1 Automate Flight  
+CHARACTERISTIC INFORMATION  
+
+Goal in Context: Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from  
+Scope: Company  
+Level: Summary  
 Preconditions: We know Buyer, their address, etc.
 Success End Condition: Drone flies without control, everyone drinks happily.
 Failed End Condition: Drone needs retrieval, everyone drinks sadly.
