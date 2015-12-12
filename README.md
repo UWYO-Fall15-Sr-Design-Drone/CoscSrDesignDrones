@@ -4,14 +4,14 @@ Readme file for the Drone group
 ##Use Case: 1 Automate Flight  
 ###CHARACTERISTIC INFORMATION   
   
-Goal in Context: Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from    
-Scope: Company  
-Level: Summary  
-Preconditions: Batteries are fully charged on Drone.       
-Success End Condition: Drone flies without control, everyone drinks happily.   
-Failed End Condition: Drone needs retrieval, everyone drinks sadly.    
-Primary Actor: Drone, APX flight controller board.     
-Trigger: Button on RC Controller is toggled on.    
+**Goal in Context:** Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from    
+**Scope:** Company  
+**Level:** Summary  
+**Preconditions:** Batteries are fully charged on Drone.       
+**Success End Condition:** Drone flies without control, everyone drinks happily.   
+**Failed End Condition:** Drone needs retrieval, everyone drinks sadly.    
+**Primary Actor:** Drone, APX flight controller board.     
+**Trigger:** Button on RC Controller is toggled on.    
   
   
 ###MAIN SUCCESS SCENARIO   
@@ -100,7 +100,7 @@ Failed End Condition:** User has no map.
 		•	What will the Drone do if there is bad weather?     
 		•	What if the server becomes unreachable?      
 ###SCHEDULE    
-**Due Date:** * February 1, 2016*     
+**Due Date:** February 1, 2016     
     
 ========================================
 Mission Statement: 
