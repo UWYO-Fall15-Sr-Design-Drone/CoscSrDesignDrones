@@ -1,6 +1,8 @@
 Readme file for the Drone group
 ========================================
-
+Use Cases:
+	Use Case 1:
+	Characteristic Information
 
 Use Cases  
 Use Case: 1 Automate Flight  
