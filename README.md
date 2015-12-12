@@ -17,15 +17,18 @@ Trigger: Button on RC Controller is toggled on.
   
   
 MAIN SUCCESS SCENARIO   
-     1.  	Button is toggled on.  
-     2. 	Drone initiates startup check.  
-     3. 	Drone takes off and flies 20 feet into the air.   
-     4. 	Drone hoovers for 5 seconds.    
-     5. 	Drone flies forward 15 feet.    
-     6. 	Drone flies backwards for 5 feet.     
-     7. 	Drone spins around to face takeoff pad.    
-     8. 	Drone flies forward 10 feet to pad.    
-     9.	        Drone lands.    
+      1.  	Button is toggled on.  
+      2. 	Drone initiates startup check.  
+      3. 	Drone takes off and flies 20 feet into the air.   
+      4. 	Drone hoovers for 5 seconds.    
+      5. 	Drone flies forward 15 feet.    
+      6. 	Drone flies backwards for 5 feet.     
+      7. 	Drone spins around to face takeoff pad.    
+      8. 	Drone flies forward 10 feet to pad.    
+      9.        Drone lands.      
+   
+       
+          
 EXTENSIONS  
 		•	2a. Drone fails initial startup check. 
 			o	2.a1 Power off and on Drone, try again.   
