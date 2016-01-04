@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="theme.css">
+		<!-- <link rel="stylesheet" type="text/css" href="theme.css"> -->
 		<meta charset="UTF-8">
 	<head>
 	<div id="puzzle">
@@ -9,7 +9,7 @@
 		
 		var _canvas;
 		var _stage;
-
+		var _fileName = "dir_content.txt";
 		//Using two test images. 
 		var _image1;
 		var _image2;
@@ -18,6 +18,17 @@
 
 
 		function main(){
+
+			
+			//Read in dir_content.txt
+			
+			//Create var from the contet
+			//Resize images
+			
+			var text = getFile.readStringFromFileAtPath ( _fileName );
+
+
+
 
 
 			//This code all needs to be moved to a funtion, figure out how to parse a folder/config file
@@ -33,6 +44,24 @@
 			loadCanvas();
 			addImages();
 		}
+
+
+
+
+		
+		function getFile()
+		{}
+		{
+    		getFile.readStringFromFileAtPath = function(_fileName)
+    			{
+        			var request = new XMLHttpRequest();
+        			request.open("GET", _fileName, false);
+        			request.send(null);
+        			var returnValue = request.responseText;
+
+      				return returnValue;
+    			}
+		}	
 
 
 		/**
