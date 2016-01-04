@@ -25,10 +25,9 @@
 			//Create var from the contet
 			//Resize images
 			
-			var text = getFile.readStringFromFileAtPath ( _fileName );
+			readTextFile(_fileName);
 
-
-
+			//file:///home/waffles/git-repos/CoscSrDesignDrones/ImageEdit/Test_Dir/dir_content.txt
 
 
 			//This code all needs to be moved to a funtion, figure out how to parse a folder/config file
@@ -48,21 +47,26 @@
 
 
 
+		/**
+		*	Reads in our _fileName and saves the content into a var
+		*/
+		var fileDisplayArea = document.getElementById('fileDisplayArea');
 		
-		function getFile()
-		{}
-		{
-    		getFile.readStringFromFileAtPath = function(_fileName)
-    			{
-        			var request = new XMLHttpRequest();
-        			request.open("GET", _fileName, false);
-        			request.send(null);
-        			var returnValue = request.responseText;
-
-      				return returnValue;
+		function readTextFile(file){
+    			var rawFile = new XMLHttpRequest();
+    			rawFile.open("GET", file, false);
+    			rawFile.onreadystatechange = function (){
+        			if(rawFile.readyState === 4){
+            				if(rawFile.status === 200 || rawFile.status == 0){
+                				var allText = rawFile.responseText;
+                				fileDisplayArea.innerText = allText 
+            				}
+        			}
     			}
-		}	
+    			rawFile.send(null);
+		}
 
+		
 
 		/**
 		*	Might need to create a few helper funtions. Needs compute the X/Y of our image
