@@ -1,9 +1,0 @@
-Can't for the life of me figure out how to upload images to github from the web. Adding imgur links to the two files need
-to get the puzzle to run. They have to be in the same directory as the puzzle.html file. 
-
-In the main funtion if you need to edit it. 
-needs to be called "puzzleImage.jpg"
-http://imgur.com/BeuKM2j
-
-needs to be called "border.jpg"
-http://imgur.com/c11l7N7

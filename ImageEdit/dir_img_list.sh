@@ -9,12 +9,12 @@
 #Clears the terminal
 clear
 #The directory we are looking in
-DIR="~/git-repos/CoscSrDesignDrones/ImageEdit/Test_Dir"
+DIR="~/git-repos/CoscSrDesignDrones/ImageEdit"
 FILE="dir_content.txt"
 
 #Checking and removing the old dir_content file.
 if [ -f $FILE ]; then
-	echo "~/git-repos/.../Test_Dir/dir_content.txt already exists."
+	echo "~/git-repos/.../dir_content.txt already exists."
 	echo "Removing old dir_content.txt"
 	rm $FILE
 fi
