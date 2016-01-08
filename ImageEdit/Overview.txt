@@ -1,22 +1,81 @@
++==============================================================================================+
 This is an overview for the ImageEdit code that will combine our map images into a master images
++==============================================================================================+
++											       +
++			NOTE: Most current information at the top        		       +
++											       +
++==============================================================================================+
 
-¡More up to date info is at the bottom!
+Program Design Overview:
+------------------------
+	Must have core requirements:
+	----------------------------
+	1.	Loads a unknown number of images from the server to the program.
+	2.	Figures out the orientation that the images were taken from on the drone.
+	3.	Combines images onto a single webpage.
 
---Images are saved to my desktop on campus. No idea how to upload images 
+	Secondary program design goals:
+	-------------------------------
+	1.	A transparency fade between map images.
+	2.	Modular coding style with many small and independent parts.
+	3.	A master config text file where all fixed values will be placed.
+	4.	Metadata handled by a secondary set of scripts
+	
+	“Nice to have” design ideas:
+	----------------------------
+	1.	Google Maps's API overlaid on the final webpage
+	2.	Humanless and dynamic handling of all data passed to it.
+	3.	Stats and data pulled from the Metadata transformed into something human readable
+
++==============================================================================================+
++				Current programs breakdown:				       +
++											       +
++==============================================================================================+
+dir_img_list.sh	
+Overview: Bashscript to be run by the server to index the images placed in the directory
+
+	dir_img_list.sh		
+		\---> Creates a text document "dir_content.txt"
+		   \---> If text document already exists, it is removed and then recreated with new information. 
+
+------------------------------------------------------------------------------------------------
+ImageEdit.html
+Overview: HTML with Javascript embedded to handle the combing of the images
+
+	ImageEdit.html
+	      |---> main() is called creating an HTML5 canvas environment
+	      			|---> readTextFile() is called
+	      			| 		|---> dir_content.txt's information is parsed
+	      			|		 \---> createPhotoVariables() is called
+	      			|				|--->Images are placed into Image() objects
+	      			|				|--->Image() objects are placed into a global array 
+	      			|---> loadImages() is called
+					     |---> loadCanvas() is called
+					     |		|---> The canvas object is created
+			   		     |---> initializeCanvas() is called
+							|---> loadImages()is called
+								    |--->Images are placed onto the canvas
+------------------------------------------------------------------------------------------------
 
 
-Must have core requirements:
-1.	Loads a series of images to program memory.
-2.	Figures out the orientation that the images were taken from on the drone.
-3.	Combines images onto a single page 
+	Future ideas to add:
+		- Need to give all the images same-ish sizes
+			-Might be best to do this ahead of time with a script so ImageEdit does not have to handle it. 
+			-PHP? Something able to edit .jpg or .png
 
-Secondary program design goals:
+	NEED A WEBSERVER
+		Javascript wont take in any data from the user
+			We can get around this by prompting the user to give data but that sounds like a bad idea
+
++==============================================================================================+
++			Out of date information, kept for reference
++==============================================================================================+
+
+Other program design goals:
 1.	A basic API so that the app on the phone can simply pass the program the images and a config file to worth with. 
-2.	A transparency fade between map images. 
-
-“Nice to have” design ideas:
-1.	Run everything from a config file so that other programs may edit that instead of running the imageEdit program. 
-2.	Pull basic GPS info off the images and parse their data. 
+2.	A transparency fade with Google's API use.  
+3.	Run everything from a config file so that other programs may edit that instead of running the imageEdit program. 
+4.	Pull basic GPS info off the images and parse their data. 
 
 
 Things to keep in mind: 
@@ -39,3 +98,6 @@ save the list to a folder. Could run this all with a simple bash script too.
 Then we know for a fact that this file will always exists we can build a parser inside the Javascript code to to run like: var _image+count.scr.load(x,y) to dynamically pull this stuff in. 
 
 This idea could fail here. Don't know if Javascript can dynamically add new vars. 
+
+
+
