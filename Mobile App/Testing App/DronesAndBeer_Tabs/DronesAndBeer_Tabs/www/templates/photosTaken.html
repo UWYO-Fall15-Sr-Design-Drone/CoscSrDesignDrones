@@ -1,0 +1,30 @@
+<!-- 
+    http://stackoverflow.com/questions/10335563/capturing-and-storing-a-picture-taken-with-the-camera-into-a-local-database-ph
+    http://gonzalo123.com/2013/10/28/taking-photos-with-a-phonegapcordova-application-and-uploading-them-to-the-server/
+    https://dzone.com/articles/ioniccordova-demo-where-did-i-take-that-picture  
+-->
+
+<ion-view view-title="Pictures Taken" align-title="center">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon icon ion-arrow-left-a" ng-click="goBack()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-camera" ng-click="getPhoto()"></button>
+    </ion-nav-buttons>
+    <ion-content style="background-color:black;">
+        <ion-list id="aspect">
+            <ion-item id="liFake" class="button button-icon" collection-repeat="photo in myData.photos" ng-click="photoClicked($index)">
+                <a href="#"><img class="aspectIMG" ng-src="data:image/png;base64,{{photo.Thumbnail}}" /></a>
+            </ion-item>
+        </ion-list>
+        <ion-content padding="true">
+                   <button ng-click="getPhoto()" class="button button-block button-primary">Take Photo</button>
+                   <img ng-src="{{lastPhoto}}" style="max-width: 100%">
+        </ion-content>
+
+        <p id="noMorePhotosToLoad" ng-show="!canMorePhotosBeLoaded()" style="color:white; text-align:center;"> </p>
+        <ion-infinite-scroll ng-if="canMorePhotosBeLoaded() == 1" on-infinite="loadMorePhotos()" distance="30%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>
+
+
