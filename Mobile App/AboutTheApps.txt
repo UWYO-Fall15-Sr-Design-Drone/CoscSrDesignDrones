@@ -1,0 +1,11 @@
+The Testing App:
+This fold contains an app which will only be used for testing purposes. We are developing and using this app for use within the group so we can hone in on what is possible and not possible to do on the mobile device. The app will be testing:
+    -	In flight uploading of images
+    -	Communicating with our server
+    -	Calibration of image quality to server upload times
+    -	Drone software manipulation
+This app is cross platform and we shall upload an android and windows version which can then be loaded onto the phones in developer mode.
+
+The Official App:
+Name and description coming soon…
+	

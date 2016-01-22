@@ -1,0 +1,80 @@
+﻿
+<!--http://gonzalo123.com/2013/10/28/taking-photos-with-a-phonegapcordova-application-and-uploading-them-to-the-server/
+
+
+http://www.gajotres.net/using-cordova-file-transfer-plugin-with-ionic-framework/
+
+http://learn.ionicframework.com/formulas/cordova-camera/
+
+https://devdactic.com/how-to-capture-and-store-images-with-ionic/
+
+
+https://blog.nraboy.com/2014/09/use-android-ios-camera-ionic-framework/
+
+https://developer.ubuntu.com/en/apps/html-5/tutorials/cordova-camera-app-tutorial/
+
+
+
+http://stackoverflow.com/questions/16923591/one-click-snap-photo-in-phonegap
+
+
+
+
+class MyThread extends Thread {
+  public void run() {
+        // test
+    try {
+      Thread.sleep(Timer);
+    } catch (InterruptedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+  camera.autoFocus(new AutoFocusCallback() {// autofocus
+
+        public void onAutoFocus(boolean success, Camera camera) {
+                Parameters params = camera.getParameters();
+                params.setPictureFormat(PixelFormat.JPEG);// format
+                params.setPreviewSize(800, 480);// width & height
+                camera.setParameters(params);// set parameters
+                camera.takePicture(null, null, jpeg);// take photo.
+        }
+    });
+   }
+ }-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="scripts/ionic-v1.2.1/css/ionic.min.css" rel="stylesheet" />
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="scripts/jquery/jquery-2.1.4.js"></script>
+    <script src="scripts/ionic-v1.2.1/js/ionic.bundle.min.js"></script>
+    <!--JavaScripts-->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+
+    <script src="scripts/cordova/ng-cordova.js"></script>
+    <script src="scripts/jquery/jquery.validate.js"></script>
+</head>
+<body ng-app="starter">
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+</body>
+</html>
