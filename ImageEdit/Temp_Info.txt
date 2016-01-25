@@ -1,0 +1,2 @@
+http://www.imagemagick.org/script/identify.php
+http://www.imagemagick.org/script/index.php
