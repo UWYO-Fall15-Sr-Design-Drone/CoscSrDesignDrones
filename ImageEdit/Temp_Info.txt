@@ -1,2 +1,3 @@
 http://www.imagemagick.org/script/identify.php
 http://www.imagemagick.org/script/index.php
+http://www.howtogeek.com/109369/how-to-quickly-resize-convert-modify-images-from-the-linux-terminal/
