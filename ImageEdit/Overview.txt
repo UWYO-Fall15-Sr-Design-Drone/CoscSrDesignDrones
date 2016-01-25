@@ -39,6 +39,11 @@ Overview: Bashscript to be run by the server to index the images placed in the d
 		   \---> If text document already exists, it is removed and then recreated with new information. 
 
 ------------------------------------------------------------------------------------------------
+
+TODO add information about dir_img_editSize.sh
+
+------------------------------------------------------------------------------------------------
+
 ImageEdit.html
 Overview: HTML with Javascript embedded to handle the combing of the images
 
