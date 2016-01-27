@@ -31,6 +31,7 @@ Program Design Overview:
 +				Current programs breakdown:				       +
 +											       +
 +==============================================================================================+
+
 dir_img_list.sh	
 Overview: Bashscript to be run by the server to index the images placed in the directory
 
@@ -40,8 +41,17 @@ Overview: Bashscript to be run by the server to index the images placed in the d
 
 ------------------------------------------------------------------------------------------------
 
-TODO add information about dir_img_editSize.sh
+dir_img_editSize.sh
+Overview: Bashscript to be run by the server to make sure all the images in the dir are about the same size
 
+	dir_img_editSize.sh
+		\---> loops through the dir, calculating the avg length and width of the images
+		   \---> Using the calculated avgs, will atempt to resize the images to the set dir avg
+		      \---> Uses two set control values that limit the maxamum strech of each image
+		      					\---> Will not stretch past 20% of the original aspect ratio
+		      								|--->SET_X_PERCENTAGE=".20"
+										\--->SET_Y_PERCENTAGE=".20"
+	
 ------------------------------------------------------------------------------------------------
 
 ImageEdit.html
