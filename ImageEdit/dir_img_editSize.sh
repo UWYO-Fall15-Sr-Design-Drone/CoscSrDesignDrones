@@ -14,5 +14,6 @@ SET_Y_PERCENTAGE=".20"
 DIR="~/git-repos/CoscSrDesignDrones/ImageEdit"
 #This should have all our images in it but it might be faster just to check again.
 FILE="dir_content.txt"
-
-
+#This line saves the number of .jpg to a var
+COUNT=find . -type f -name '*.log' | wc -l
+echo COUNT 
