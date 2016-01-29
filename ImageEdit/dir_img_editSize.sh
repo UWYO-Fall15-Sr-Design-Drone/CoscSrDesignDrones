@@ -42,8 +42,7 @@ do
 	echo "Sum of x is $TOTAL_X"
 	
 	
-	Look into using cut the X val out of the string and then saving it.
-
+	TMPX=$(echo $STR | grep -o -E 's/^0\+//' | tail -1 | sed -e '[0-9]+')
 	TMPY=$(echo `expr )
 	echo "Sum of y is $TMPY"
 	
