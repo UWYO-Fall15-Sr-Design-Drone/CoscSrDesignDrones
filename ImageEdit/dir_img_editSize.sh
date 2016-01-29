@@ -34,9 +34,19 @@ TOTAL_Y=0
 #Looping through the dir
 for f in $DIR/*
 do	
-	$STR identify -ping -format '%w %h' $f
-	echo $STR | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//'
-	echo \n
-done
+	#Taking the output of the identify commnad and saving it in SRT
+	STR=$(identify -ping -format '%w %h' $f)
+	#Running some regx to find the first number and saving it in a tmp
+	TMPX=$(echo $STR | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//')
+	TOTAL_X=$((TOTAL_X + TMPX))
+	echo "Sum of x is $TOTAL_X"
+	
+	
+	Look into using cut the X val out of the string and then saving it.
+
+	TMPY=$(echo `expr )
+	echo "Sum of y is $TMPY"
+	
+done	
 
 cd ..
