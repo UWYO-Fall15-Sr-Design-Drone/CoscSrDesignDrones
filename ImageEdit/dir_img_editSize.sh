@@ -41,10 +41,11 @@ do
 	TOTAL_X=$((TOTAL_X + TMPX))
 	echo "Sum of x is $TOTAL_X"
 	
-	
-	TMPX=$(echo $STR | grep -o -E 's/^0\+//' | tail -1 | sed -e '[0-9]+')
-	TMPY=$(echo `expr )
-	echo "Sum of y is $TMPY"
+	XSIZE=${#TMPX}
+	echo $XSIZE
+	$STR | cut -c $SIZE-
+	#TMPY=$(echo $XSIZE )
+	#echo "Sum of y is $TMPY"
 	
 done	
 
