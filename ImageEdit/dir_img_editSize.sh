@@ -34,8 +34,8 @@ TOTAL_Y=0
 #Looping through the dir
 for f in $DIR/*
 do	
-	$String identify -ping -format '%w %h' $f
-	echo $String | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//'
+	$STR identify -ping -format '%w %h' $f
+	echo $STR | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//'
 	echo \n
 done
 
