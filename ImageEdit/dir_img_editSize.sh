@@ -10,10 +10,33 @@
 SET_X_PERCENTAGE=".20"
 SET_Y_PERCENTAGE=".20"
 
+clear
 #The directory we are looking in
-DIR="~/git-repos/CoscSrDesignDrones/ImageEdit"
+DIR="/home/waffles/git-repos/CoscSrDesignDrones/ImageEdit/Images"
 #This should have all our images in it but it might be faster just to check again.
 FILE="dir_content.txt"
+
+#Moving to our dir
+cd $DIR
+
 #This line saves the number of .jpg to a var
 COUNT="$(find . -type f -name '*.jpg' | wc -l)"
-echo "${COUNT}" 
+
+#Count is always 1 high? Will look into this later
+let COUNT=COUNT-1
+
+echo "There are $COUNT .jpg images in the directory."
+echo "----------------------------------------------"
+
+TOTAL_X=0
+TOTAL_Y=0
+
+#Looping through the dir
+for f in $DIR/*
+do	
+	$String identify -ping -format '%w %h' $f
+	echo $String | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//'
+	echo \n
+done
+
+cd ..
