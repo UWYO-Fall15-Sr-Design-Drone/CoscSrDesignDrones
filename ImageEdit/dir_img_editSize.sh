@@ -43,8 +43,12 @@ do
 	
 	XSIZE=${#TMPX}
 	echo $XSIZE
-	$STR | cut -c $SIZE-
-	#TMPY=$(echo $XSIZE )
+	#Cutting the size of the first number off the total string
+	#+1 for the space
+	XSIZE=$((XSIZE + 1))
+	TMPY=$(echo ${STR:XSIZE})
+	echo $TMPY )
+	#Sum the Ys together. 
 	#echo "Sum of y is $TMPY"
 	
 done	
