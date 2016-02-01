@@ -39,18 +39,38 @@ do
 	#Running some regx to find the first number and saving it in a tmp
 	TMPX=$(echo $STR | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//')
 	TOTAL_X=$((TOTAL_X + TMPX))
-	echo "Sum of x is $TOTAL_X"
-	
+	#echo "Sum of x is $TOTAL_X"
+	#Xsize is the number of char X is	
 	XSIZE=${#TMPX}
-	echo $XSIZE
-	#Cutting the size of the first number off the total string
-	#+1 for the space
+	#Add 1 for the space
 	XSIZE=$((XSIZE + 1))
+	#Cutting the size of the first number off the total string
 	TMPY=$(echo ${STR:XSIZE})
-	echo $TMPY )
+	TOTAL_Y=$((TOTAL_Y + TMPY))
 	#Sum the Ys together. 
-	#echo "Sum of y is $TMPY"
+	#echo "Sum of y is $TOTAL_Y"
 	
-done	
 
+
+	#Now we have both our X and Y, need to calc the ratio and compare it to 
+	#our two set values. Bash only uses int so we have to use bc to get our 	floats
+	CMPR_X=$(echo "$TOTAL_X/$TOTAL_Y" | bc -l)
+	CMPR_Y=$(echo "$TOTAL_Y/$TOTAL_X" | bc -l)
+	#echo "CMPR_X is $CMPR_X and CMPR_Y is $CMPR_Y"
+done
+
+AVG_X=$(echo "$TOTAL_X/$COUNT" | bc -l)
+AVG_Y=$(echo "$TOTAL_Y/$COUNT" | bc -l)
+
+echo "The total X is $TOTAL_X and the total Y is $TOTAL_Y"	
+echo "The avg X is $AVG_X and $AVG_Y"
+
+#Looping through the dir a second time, to compare images to the avg
+for g in $DIR/*
+do
+	#TODO Get X and Y, then compare, IF edit, ELSE nothing
+
+done
+
+#Dumping us back to our home directory
 cd ..
