@@ -83,7 +83,7 @@ Overview: HTML with Javascript embedded to handle the combing of the images
 			We can get around this by prompting the user to give data but that sounds like a bad idea
 
 +==============================================================================================+
-+			Out of date information, kept for reference
++			Out of date information, kept for reference			       +
 +==============================================================================================+
 
 Other program design goals:
