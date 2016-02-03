@@ -69,7 +69,10 @@ AVG_X=$(echo "$TOTAL_X/$COUNT" | bc -l)
 AVG_Y=$(echo "$TOTAL_Y/$COUNT" | bc -l)
 
 #Now that we have our avg, need to fill in our bounds. 
-TODO 
+#Lets start and find our change
+X_BOUNDS=$(echo "$AVG_X - ($AVG_X * $SET_X_PERCENTAGE" | bc -l)
+Y_BOUNDS=$(echo "$AVG_Y - ($AVG_Y * $SET_Y_PERCENTAGE" | bc -l)
+echo "X bounds = $X_BOUNDS , Y bounds = $Y_BOUNDS"
 SET_X_VAL_UPPER="0"
 SET_Y_VAL_UPPER="0"
 SET_X_VAL_LOWER="0"
