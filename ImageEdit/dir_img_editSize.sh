@@ -9,6 +9,12 @@
 # we will never go past the 200px to keep some of the orignal aspect ratio
 SET_X_PERCENTAGE=".20"
 SET_Y_PERCENTAGE=".20"
+#We will store our set percentage vals here, need an upper/lower bounds
+SET_X_VAL_UPPER="0"
+SET_Y_VAL_UPPER="0"
+SET_X_VAL_LOWER="0"
+SET_Y_VAL_LOWER="0"
+
 
 clear
 #The directory we are looking in
@@ -58,9 +64,17 @@ do
 	CMPR_Y=$(echo "$TOTAL_Y/$TOTAL_X" | bc -l)
 	#echo "CMPR_X is $CMPR_X and CMPR_Y is $CMPR_Y"
 done
-
+#Calc our avgs 
 AVG_X=$(echo "$TOTAL_X/$COUNT" | bc -l)
 AVG_Y=$(echo "$TOTAL_Y/$COUNT" | bc -l)
+
+#Now that we have our avg, need to fill in our bounds. 
+TODO 
+SET_X_VAL_UPPER="0"
+SET_Y_VAL_UPPER="0"
+SET_X_VAL_LOWER="0"
+SET_Y_VAL_LOWER="0"
+
 
 echo "The total X is $TOTAL_X and the total Y is $TOTAL_Y"	
 echo "The avg X is $AVG_X and $AVG_Y"
@@ -73,12 +87,13 @@ do
 	#This code just puts our X and Y into X and Y, changed var names to help break apart the loops. 
 	STR=$(identify -ping -format '%w %h' $f)
 	VALX=$(echo $STR | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//')
-	XSIZE=${#VALX + 1}
+	XSIZE=${#VALX}
+	XSIZE=$((XSIZE + 1))
 	VALY=$(echo ${STR:XSIZE})
 	
 	echo "Working on $g, its X is $VALX and its Y is $VALY"
-	CheckValX=$(echo "$VALX * $SET_X_PERCENTAGE" | bc -l)
-	CheckValY=$(echo "$VALY * $SET_Y_PERCENTAGE" | bc -l)
+	CheckValX=$(echo "$VALX - ($VALX * $SET_X_PERCENTAGE)" | bc -l)
+	CheckValY=$(echo "$VALY - ($VALY * $SET_Y_PERCENTAGE)" | bc -l)
 	echo "80% of X is $CheckValX and Y is $CheckValY"
 done
 
