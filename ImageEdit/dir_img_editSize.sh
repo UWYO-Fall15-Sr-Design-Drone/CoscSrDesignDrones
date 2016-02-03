@@ -68,8 +68,18 @@ echo "The avg X is $AVG_X and $AVG_Y"
 #Looping through the dir a second time, to compare images to the avg
 for g in $DIR/*
 do
-	#TODO Get X and Y, then compare, IF edit, ELSE nothing
-
+	#Okay, there has to be a better way where we just store this data the first time we get it into an array
+	#but I'm a hair short on time so I'm just going to suck it up and calc it all again. Sorry Richard Stallman
+	#This code just puts our X and Y into X and Y, changed var names to help break apart the loops. 
+	STR=$(identify -ping -format '%w %h' $f)
+	VALX=$(echo $STR | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//')
+	XSIZE=${#VALX + 1}
+	VALY=$(echo ${STR:XSIZE})
+	
+	echo "Working on $g, its X is $VALX and its Y is $VALY"
+	CheckValX=$(echo "$VALX * $SET_X_PERCENTAGE" | bc -l)
+	CheckValY=$(echo "$VALY * $SET_Y_PERCENTAGE" | bc -l)
+	echo "80% of X is $CheckValX and Y is $CheckValY"
 done
 
 #Dumping us back to our home directory
