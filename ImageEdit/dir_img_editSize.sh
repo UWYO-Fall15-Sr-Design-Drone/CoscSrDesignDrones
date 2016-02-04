@@ -70,17 +70,15 @@ AVG_Y=$(echo "$TOTAL_Y/$COUNT" | bc -l)
 
 #Now that we have our avg, need to fill in our bounds. 
 #Lets start and find our change
-X_BOUNDS=$(echo "$AVG_X - ($AVG_X * $SET_X_PERCENTAGE" | bc -l)
-Y_BOUNDS=$(echo "$AVG_Y - ($AVG_Y * $SET_Y_PERCENTAGE" | bc -l)
-echo "X bounds = $X_BOUNDS , Y bounds = $Y_BOUNDS"
-SET_X_VAL_UPPER="0"
-SET_Y_VAL_UPPER="0"
-SET_X_VAL_LOWER="0"
-SET_Y_VAL_LOWER="0"
+X_BOUNDS=$(echo "$AVG_X * $SET_X_PERCENTAGE" | bc -l)
+Y_BOUNDS=$(echo "$AVG_Y * $SET_Y_PERCENTAGE" | bc -l)
+SET_X_VAL_UPPER=$(echo "$AVG_X + $X_BOUNDS" | bc -l)
+SET_Y_VAL_UPPER=$(echo "$AVG_Y + $Y_BOUNDS" | bc -l)
+SET_X_VAL_LOWER=$(echo "$AVG_X - $X_BOUNDS" | bc -l)
+SET_Y_VAL_LOWER=$(echo "$AVG_Y - $Y_BOUNDS" | bc -l)
 
-
-echo "The total X is $TOTAL_X and the total Y is $TOTAL_Y"	
-echo "The avg X is $AVG_X and $AVG_Y"
+#echo "Bounds: Xupper $SET_X_VAL_UPPER, Xlower $SET_X_VAL_LOWER"
+#echo "Bounds: Yupper $SET_Y_VAL_UPPER, ylower $SET_Y_VAL_LOWER"
 
 #Looping through the dir a second time, to compare images to the avg
 for g in $DIR/*
@@ -93,8 +91,22 @@ do
 	XSIZE=${#VALX}
 	XSIZE=$((XSIZE + 1))
 	VALY=$(echo ${STR:XSIZE})
+	echo "-----------------------"
+	echo "Working on $g"
+	echo "its X is $VALX and its Y is $VALY"
+
+	#If by some crazy chance they are the same size
+	if["$AVG_X" == "$VALX" && "$AVG_Y" == "$VALY"] then
+		echo "Images are the same size, making no changes"	 	
+	else
+		#Our images are not the same size, first checking for X
+		if["$VALX > $AVG_X"] then
+			#TODO 
+		fi
+		
+	fi
+
 	
-	echo "Working on $g, its X is $VALX and its Y is $VALY"
 	CheckValX=$(echo "$VALX - ($VALX * $SET_X_PERCENTAGE)" | bc -l)
 	CheckValY=$(echo "$VALY - ($VALY * $SET_Y_PERCENTAGE)" | bc -l)
 	echo "80% of X is $CheckValX and Y is $CheckValY"
