@@ -74,13 +74,8 @@ Overview: HTML with Javascript embedded to handle the combing of the images
 
 
 	Future ideas to add:
-		- Need to give all the images same-ish sizes
-			-Might be best to do this ahead of time with a script so ImageEdit does not have to handle it. 
-			-PHP? Something able to edit .jpg or .png
+		Need a renamer funtion for imageediter to be happy
 
-	NEED A WEBSERVER
-		Javascript wont take in any data from the user
-			We can get around this by prompting the user to give data but that sounds like a bad idea
 
 +==============================================================================================+
 +			Out of date information, kept for reference			       +
@@ -114,5 +109,8 @@ Then we know for a fact that this file will always exists we can build a parser 
 
 This idea could fail here. Don't know if Javascript can dynamically add new vars. 
 
+	NEED A WEBSERVER
+		Javascript wont take in any data from the user
+			We can get around this by prompting the user to give data but that sounds like a bad idea
 
 
