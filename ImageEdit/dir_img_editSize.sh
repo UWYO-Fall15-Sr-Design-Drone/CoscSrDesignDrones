@@ -32,7 +32,7 @@ COUNT="$(find . -type f -name '*.jpg' | wc -l)"
 let COUNT=COUNT-1
 
 echo "There are $COUNT .jpg images in the directory."
-echo "----------------------------------------------"
+echo "-----------------------"
 
 TOTAL_X=0
 TOTAL_Y=0
@@ -54,9 +54,6 @@ do
 	TMPY=$(echo ${STR:XSIZE})
 	TOTAL_Y=$((TOTAL_Y + TMPY))
 	#Sum the Ys together. 
-	#echo "Sum of y is $TOTAL_Y"
-	
-
 
 	#Now we have both our X and Y, need to calc the ratio and compare it to 
 	#our two set values. Bash only uses int so we have to use bc to get our 	floats
@@ -64,9 +61,10 @@ do
 	CMPR_Y=$(echo "$TOTAL_Y/$TOTAL_X" | bc -l)
 	#echo "CMPR_X is $CMPR_X and CMPR_Y is $CMPR_Y"
 done
-#Calc our avgs 
-AVG_X=$(echo "$TOTAL_X/$COUNT" | bc -l)
-AVG_Y=$(echo "$TOTAL_Y/$COUNT" | bc -l)
+#This block of code finds our avg and bounds
+#----------------------------------------
+AVG_X=$(echo $((TOTAL_X / $COUNT)))
+AVG_Y=$(echo $((TOTAL_Y / $COUNT)))
 
 #Now that we have our avg, need to fill in our bounds. 
 #Lets start and find our change
@@ -76,40 +74,71 @@ SET_X_VAL_UPPER=$(echo "$AVG_X + $X_BOUNDS" | bc -l)
 SET_Y_VAL_UPPER=$(echo "$AVG_Y + $Y_BOUNDS" | bc -l)
 SET_X_VAL_LOWER=$(echo "$AVG_X - $X_BOUNDS" | bc -l)
 SET_Y_VAL_LOWER=$(echo "$AVG_Y - $Y_BOUNDS" | bc -l)
+#----------------------------------------
 
-#echo "Bounds: Xupper $SET_X_VAL_UPPER, Xlower $SET_X_VAL_LOWER"
-#echo "Bounds: Yupper $SET_Y_VAL_UPPER, ylower $SET_Y_VAL_LOWER"
+#Creating a resizer funtion
+resizer(){
+	local imageName=$1
+	local VALX=$2
+	local VALY=$3
+	#Comparing our image to the avg
+	if [[ "$VALX" -gt "$AVG_X" ]]
+	then
+		echo "VALX > AVG X"
+	fi	
+	if [[ "$VALY" -lt "$AVG_Y" ]]
+	then
+		echo "VALY < AVG Y"
+	fi
+	if [[ "$AVG_Y" -lt "$VALY" ]]
+	then
+		echo "AVG Y > VAL Y"
+	fi
+	if [[ "$AVG_X" -gt "$VALX" ]]
+	then
+	 	echo "AVG X < VAL X"
+	fi
+}
+
+#Used to create the filename
+nameCount=1
+fileName=""
 
 #Looping through the dir a second time, to compare images to the avg
 for g in $DIR/*
 do
+
+	fileName=$(echo "Photo_$nameCount")
+	nameCount=$((nameCount + 1))
 	#Okay, there has to be a better way where we just store this data the first time we get it into an array
 	#but I'm a hair short on time so I'm just going to suck it up and calc it all again. Sorry Richard Stallman
 	#This code just puts our X and Y into X and Y, changed var names to help break apart the loops. 
-	STR=$(identify -ping -format '%w %h' $f)
+	STR=$(identify -ping -format '%w %h' $g)
 	VALX=$(echo $STR | grep -o -E '[0-9]+' | head -1 | sed -e 's/^0\+//')
 	XSIZE=${#VALX}
 	XSIZE=$((XSIZE + 1))
 	VALY=$(echo ${STR:XSIZE})
-	echo "-----------------------"
-	echo "Working on $g"
-	echo "its X is $VALX and its Y is $VALY"
+	echo "Average Image size: $AVG_X  $AVG_Y and $fileName is $VALX $VALY"
 
-	#If by some crazy chance they are the same size
-	if["$AVG_X" == "$VALX" && "$AVG_Y" == "$VALY"] then
-		echo "Images are the same size, making no changes"	 	
-	else
-		#Our images are not the same size, first checking for X
-		if["$VALX > $AVG_X"] then
-			#TODO 
-		fi
-		
-	fi
-
-	
+	#Creating our resize amounts, doing this ahead of time even though
+	#we might not use it because I don't want to have to calc it 4 times
 	CheckValX=$(echo "$VALX - ($VALX * $SET_X_PERCENTAGE)" | bc -l)
 	CheckValY=$(echo "$VALY - ($VALY * $SET_Y_PERCENTAGE)" | bc -l)
 	echo "80% of X is $CheckValX and Y is $CheckValY"
+
+	#Check image size to the avg and call a resizer funtion
+	#----------------------------------------
+	#If by some crazy chance they are the same size
+	if [[ "$AVG_X" -eq "$VALX" ]]&& [[ "$AVG_Y" -eq "$VALY" ]]
+	then
+		echo "Images are the same size, making no changes"	 	
+	else
+		#Calling our funtion checking sizes
+		resizer $filename $VALX $VALY
+	fi
+	#----------------------------------------
+
+echo "-----------------------"
 done
 
 #Dumping us back to our home directory
