@@ -75,30 +75,63 @@ SET_Y_VAL_UPPER=$(echo "$AVG_Y + $Y_BOUNDS" | bc -l)
 SET_X_VAL_LOWER=$(echo "$AVG_X - $X_BOUNDS" | bc -l)
 SET_Y_VAL_LOWER=$(echo "$AVG_Y - $Y_BOUNDS" | bc -l)
 #----------------------------------------
+	
+#Because you gotta love bash, just going to make this global var
+#to work as a return val
+isBuggerBool=false
 
-#Creating a resizer funtion
+#Figures out what needs to be resized
 resizer(){
-	local imageName=$1
-	local VALX=$2
-	local VALY=$3
+	local imageName=$0
+	local VALX=$1
+	local VALY=$2
+
 	#Comparing our image to the avg
 	if [[ "$VALX" -gt "$AVG_X" ]]
 	then
-		echo "VALX > AVG X"
+		isBiggerX $VALX
 	fi	
 	if [[ "$VALY" -lt "$AVG_Y" ]]
 	then
-		echo "VALY < AVG Y"
+		isBiggerY $VALY
 	fi
 	if [[ "$AVG_Y" -lt "$VALY" ]]
 	then
-		echo "AVG Y > VAL Y"
+		isBiggerY $VALY
 	fi
 	if [[ "$AVG_X" -gt "$VALX" ]]
 	then
-	 	echo "AVG X < VAL X"
+	 	isBiggerX $VALX
 	fi
 }
+
+#Funtion that checks if our image X is past the set size limit
+isBiggerX(){
+	local VALX=$1
+	#Converting our float to an int
+	CheckValX=${CheckValX%.*}
+	if [[ "$CheckValX" -gt "$AVG_X" ]] 
+	then
+		echo "$CheckValX > $AVG_X"
+	else
+		echo "$CheckValX < $AVG_X"
+	fi
+}
+
+#Funtion that checks if our image Y is past the set size limit
+isBiggerY(){
+	local VALY=$1
+	#Converting our float to an int
+	CheckValY=${CheckValY%.*}
+	if [[ "$CheckValY" -gt "$AVG_Y" ]]
+	then
+		echo "$CheckValY > $AVG_Y"
+	else
+		echo "$CheckValY < $AVG_Y"
+	fi
+}
+
+#IF Check Val is 
 
 #Used to create the filename
 nameCount=1
