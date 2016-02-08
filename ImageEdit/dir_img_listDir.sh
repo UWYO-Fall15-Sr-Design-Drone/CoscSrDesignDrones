@@ -1,5 +1,5 @@
 #!/bin/bash
-#Scott Efird, last updated Jan25 2016
+#Scott Efird, last updated Feb 8 2016
 
 #This script looks in the dir listed below and prints a text file
 #called "dir_content.txt" with a list of jpg images in the directory.
@@ -21,10 +21,7 @@ fi
 
 #Listing the directory and grabbing only the jpg files from it. 
 cd /home/waffles/git-repos/CoscSrDesignDrones/ImageEdit/Images
-for file in DIR
-do
-	ls | grep .jpg > dir_content.txt
-done
+ls | grep .jpg > dir_content.txt
 
 #Copying file from image dir up upper dir
 cp dir_content.txt ..

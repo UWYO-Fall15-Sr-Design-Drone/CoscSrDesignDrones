@@ -1,5 +1,5 @@
 #!/bin/bash
-#Scott Efird, last updated Jan 25 2016
+#Scott Efird, last updated Feb 8 2016
 
 #This script will check all the sizes of the images in the folder
 #and then resize them to a set scale. 
@@ -32,6 +32,7 @@ COUNT="$(find . -type f -name '*.jpg' | wc -l)"
 let COUNT=COUNT-1
 
 echo "There are $COUNT .jpg images in the directory."
+echo "Maximum change to aspect ratio is: $SET_X_PERCENTAGE"
 echo "-----------------------"
 
 TOTAL_X=0
@@ -85,49 +86,59 @@ resizer(){
 	local imageName=$0
 	local VALX=$1
 	local VALY=$2
+	local file=$3
 
 	#Comparing our image to the avg
 	if [[ "$VALX" -gt "$AVG_X" ]]
 	then
-		isBiggerX $VALX
+		isBiggerX $VALX $VALY $file 
 	fi	
 	if [[ "$VALY" -lt "$AVG_Y" ]]
 	then
-		isBiggerY $VALY
+		isBiggerY $VALX $VALY $file 
 	fi
 	if [[ "$AVG_Y" -lt "$VALY" ]]
 	then
-		isBiggerY $VALY
+		isBiggerY $VALX $VALY $file 
 	fi
 	if [[ "$AVG_X" -gt "$VALX" ]]
 	then
-	 	isBiggerX $VALX
+	 	isBiggerX $VALX $VALY $file 
 	fi
 }
 
 #Funtion that checks if our image X is past the set size limit
 isBiggerX(){
 	local VALX=$1
+	local VALY=$2
+	local file=$3
 	#Converting our float to an int
 	CheckValX=${CheckValX%.*}
 	if [[ "$CheckValX" -gt "$AVG_X" ]] 
 	then
-		echo "$CheckValX > $AVG_X"
+		echo "New X Val is :$CheckValX"
+		convert $file -resize $VALXx$VALY\! $file
 	else
-		echo "$CheckValX < $AVG_X"
+		echo "New X Val is :$AVG_X"
+		convert $file -resize $VALXx$VALY\! $file
 	fi
 }
 
 #Funtion that checks if our image Y is past the set size limit
 isBiggerY(){
-	local VALY=$1
+	local VALX=$1
+	local VALY=$2
+	local file=$3
+
 	#Converting our float to an int
 	CheckValY=${CheckValY%.*}
 	if [[ "$CheckValY" -gt "$AVG_Y" ]]
 	then
-		echo "$CheckValY > $AVG_Y"
+		echo "New Y Val is :$CheckValY"
+		convert $file -resize $VALXx$VALY\! $file
 	else
-		echo "$CheckValY < $AVG_Y"
+		echo "New Y Val is :$AVG_Y"
+		convert $file -resize $VALXx$VALY\! $file
 	fi
 }
 
@@ -157,7 +168,7 @@ do
 	#we might not use it because I don't want to have to calc it 4 times
 	CheckValX=$(echo "$VALX - ($VALX * $SET_X_PERCENTAGE)" | bc -l)
 	CheckValY=$(echo "$VALY - ($VALY * $SET_Y_PERCENTAGE)" | bc -l)
-	echo "80% of X is $CheckValX and Y is $CheckValY"
+	#echo "80% of X is $CheckValX and Y is $CheckValY"
 
 	#Check image size to the avg and call a resizer funtion
 	#----------------------------------------
@@ -166,8 +177,10 @@ do
 	then
 		echo "Images are the same size, making no changes"	 	
 	else
-		#Calling our funtion checking sizes
-		resizer $filename $VALX $VALY
+		#Calling our funtion checking sizes and creating a temp file name
+		jpg=".jpg"
+		tempFileName=$fileName$jpg
+		resizer $filename $VALX $VALY $tempFileName
 	fi
 	#----------------------------------------
 
