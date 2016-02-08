@@ -27,6 +27,7 @@ Program Design Overview:
 	2.	Humanless and dynamic handling of all data passed to it.
 	3.	Stats and data pulled from the Metadata transformed into something human readable
 
+
 +==============================================================================================+
 +				Current programs breakdown:				       +
 +											       +
@@ -74,7 +75,7 @@ Overview: HTML with Javascript embedded to handle the combing of the images
 
 
 	Future ideas to add:
-		Need a renamer funtion for imageediter to be happy
+		Checker bash script that makes sure everything is in the "Photo_#.jpg" format. 
 
 
 +==============================================================================================+
