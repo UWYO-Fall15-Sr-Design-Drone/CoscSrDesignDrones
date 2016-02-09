@@ -55,7 +55,11 @@ Overview: Bashscript to be run by the server to make sure all the images in the 
 	
 ------------------------------------------------------------------------------------------------
 
+dir_img_EXIF_Scraper.sh
+Overview: Bashscript to be run by the server to output our EXIF data to a handy dandy textfile.
 
+	dir_img_EXIF_Scraper.sh
+		\ TODO
 
 ------------------------------------------------------------------------------------------------
 
