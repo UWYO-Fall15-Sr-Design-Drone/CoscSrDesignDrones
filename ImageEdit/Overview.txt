@@ -72,11 +72,14 @@ Overview: HTML with Javascript embedded to handle the combing of the images
 							|---> loadImages()is called
 								    |--->Images are placed onto the canvas
 ------------------------------------------------------------------------------------------------
+!!!!This script is dead, doing this on the phone.!!!
 
+dir_img_editImageNames.sh
+Overview: Bash script to change all the photo names to the format of "Photo_#.jpg"
 
-	Future ideas to add:
-		Checker bash script that makes sure everything is in the "Photo_#.jpg" format. 
-
+	dir_img_editImageNames.sh
+		\--->Loops through the dir looking for photos
+					\---> Uses a count to change the name matching the format
 
 +==============================================================================================+
 +			Out of date information, kept for reference			       +
