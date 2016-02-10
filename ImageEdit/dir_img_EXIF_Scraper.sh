@@ -14,7 +14,6 @@ cd $DIR
 #Looping through the dir
 for f in *.jpg; do
 	
-
 	#TODO
 	#Add if statement to check if image.
 	identify -verbose f | grep "exif:"
