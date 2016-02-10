@@ -1,0 +1,13 @@
+Drone Update 2/10/16
+
+Currently using Mission Planner software to pilot drone on GPS path.
+Software is access here: http://planner.ardupilot.com/
+
+Software and folders are contained inside /DroneCode/MissionPlanner
+
+Drone Status:
+  Drone now contains physical phone attachment device.
+  Drone's landing gear is now fixed.
+  GPS locator is working, drone can be seen on stailite map.
+  Drone controll using controller works, trim adjustments are severely messed up, needing adjustments for manual flight.
+  
