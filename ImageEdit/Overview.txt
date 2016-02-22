@@ -59,7 +59,8 @@ dir_img_EXIF_Scraper.sh
 Overview: Bashscript to be run by the server to output our EXIF data to a handy dandy textfile.
 
 	dir_img_EXIF_Scraper.sh
-		\ TODO
+		\ --->Loops through the dir, grabbing all the exif metadata from the images
+					\---> Saves the meta data as "exif_data.txt"
 
 ------------------------------------------------------------------------------------------------
 
