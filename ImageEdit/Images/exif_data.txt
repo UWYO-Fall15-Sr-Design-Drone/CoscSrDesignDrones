@@ -1,14 +1,167 @@
+=============================================
 File: 1.jpg
-string
-File: Photo_1.jpg
-string
-File: Photo_2.jpg
-string
-File: Photo_3.jpg
-string
-File: Photo_4.jpg
-string
-File: Photo_5.jpg
-string
-File: Photo_6.jpg
-string
+---------------------------------------------
+exif:ApertureValue=185/100
+exif:BrightnessValue=-82/100
+exif:ColorSpace=1
+exif:DateTime=2016:02:06 11:45:29
+exif:DateTimeDigitized=2016:02:06 11:45:29
+exif:DateTimeOriginal=2016:02:06 11:45:29
+exif:ExifImageLength=1836
+exif:ExifImageWidth=3264
+exif:ExifOffset=234
+exif:ExifVersion=48, 50, 50, 48
+exif:ExposureBiasValue=0/10
+exif:ExposureMode=0
+exif:ExposureProgram=2
+exif:ExposureTime=1/11
+exif:Flash=0
+exif:FlashPixVersion=48, 49, 48, 48
+exif:FNumber=19/10
+exif:FocalLength=430/100
+exif:FocalLengthIn35mmFilm=28
+exif:ImageLength=1836
+exif:ImageUniqueID=A16LSIA00SM A16LSIH01SM.
+exif:ImageWidth=3264
+exif:ISOSpeedRatings=200
+exif:Make=samsung
+exif:MakerNote=7, 0, 1, 0, 7, 0, 4, 0, 0, 0, 48, 49, 48, 48, 2, 0, 4, 0, 1, 0, 0, 0, 0, 32, 1, 0, 12, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 16, 0, 5, 0, 1, 0, 0, 0, 90, 0, 0, 0, 64, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 80, 0, 4, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+exif:MaxApertureValue=185/100
+exif:MeteringMode=2
+exif:Model=SAMSUNG-SM-G890A
+exif:Orientation=1
+exif:ResolutionUnit=2
+exif:SceneCaptureType=0
+exif:ShutterSpeedValue=491/100
+exif:Software=G890AUCU3BOJE
+exif:thumbnail:Compression=6
+exif:thumbnail:ImageLength=288
+exif:thumbnail:ImageWidth=512
+exif:thumbnail:JPEGInterchangeFormat=948
+exif:thumbnail:JPEGInterchangeFormatLength=7156
+exif:thumbnail:Orientation=6
+exif:thumbnail:ResolutionUnit=2
+exif:thumbnail:XResolution=72/1
+exif:thumbnail:YResolution=72/1
+exif:UserComment=0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+exif:WhiteBalance=0
+exif:XResolution=72/1
+exif:YCbCrPositioning=1
+exif:YResolution=72/1
+=============================================
+=============================================
+File: IMAG01382.jpg
+---------------------------------------------
+exif:ApertureValue=200/100
+exif:BrightnessValue=0/101
+exif:ColorSpace=1
+exif:ComponentsConfiguration=1, 2, 3, 0
+exif:CompressedBitsPerPixel=4000/1000
+exif:Contrast=0
+exif:CustomRendered=0
+exif:DateTimeDigitized=2016:02:16 06:56:51
+exif:DateTimeOriginal=2016:02:16 06:56:51
+exif:DigitalZoomRatio=0/100
+exif:ExifImageLength=1520
+exif:ExifImageWidth=2688
+exif:ExifOffset=2256
+exif:ExifVersion=48, 50, 50, 48
+exif:ExposureBiasValue=0/6
+exif:ExposureMode=0
+exif:ExposureProgram=2
+exif:ExposureTime=99992/1000000
+exif:Flash=0
+exif:FlashPixVersion=48, 49, 48, 48
+exif:FNumber=200/100
+exif:FocalLength=381/100
+exif:FocalLengthIn35mmFilm=47
+exif:GainControl=1
+exif:GPSInfo=9408
+exif:InteroperabilityOffset=9368
+exif:ISOSpeedRatings=1000
+exif:LightSource=15
+exif:Make=HTC
+exif:MakerNote=104, 116, 99, 73, 0, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0, 9, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0, 194, 73, 0, 0, 3, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 97, 3, 0, 0, 243, 1, 0, 0, 32, 1, 0, 0, 14, 1, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 2, 0, 0, 0, 65, 41, 7, 0, 152, 2, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 0, 0, 0, 241, 10, 0, 0, 0, 0, 0, 0, 1, 0, 200, 193, 252, 84, 63, 89, 196, 231, 58, 57, 143, 9, 67, 229, 57, 15, 59, 109, 20, 85, 63, 225, 131, 89, 66, 45, 29, 204, 53, 84, 167, 159, 54, 113, 74, 127, 63, 201, 99, 35, 193, 33, 223, 76, 63, 158, 134, 90, 61, 167, 162, 40, 68, 79, 48, 46, 192, 118, 7, 42, 192, 149, 88, 246, 192, 240, 58, 9, 68, 113, 214, 236, 187, 229, 62, 232, 187, 153, 100, 213, 55, 0, 0, 128, 63, 0, 5, 208, 2, 136, 7, 60, 4, 52, 128, 183, 58, 0, 0, 128, 63, 0, 0, 128, 63, 113, 61, 202, 63, 0, 0, 200, 67, 0, 0, 97, 0, 194, 0, 35, 1, 132, 1, 229, 1, 70, 2, 167, 2, 9, 3, 106, 3, 203, 3, 44, 4, 141, 4, 238, 4, 79, 5, 176, 5, 17, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 60, 0, 20, 0, 236, 255, 30, 0, 137, 0, 227, 0, 217, 0, 87, 0, 116, 255, 200, 254, 228, 254, 12, 0, 254, 1, 8, 4, 248, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 126, 229, 48, 193, 195, 21, 11, 64, 114, 156, 147, 61, 0, 165, 27, 68, 9, 107, 49, 192, 78, 36, 47, 192, 79, 54, 20, 193, 58, 73, 20, 68, 228, 192, 236, 187, 135, 207, 232, 187, 83, 2, 146, 56, 0, 0, 128, 63, 0, 5, 208, 2, 128, 10, 232, 5, 111, 18, 3, 59, 97, 41, 35, 200, 0, 28, 134, 70, 225, 122, 116, 64, 0, 0, 250, 68, 0, 0, 193, 0, 130, 1, 67, 2, 4, 3, 197, 3, 134, 4, 71, 5, 8, 6, 201, 6, 138, 7, 75, 8, 12, 9, 205, 9, 142, 10, 79, 11, 16, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 0, 208, 0, 164, 1, 166, 2, 169, 3, 133, 4, 84, 5, 42, 6, 227, 6, 87, 7, 148, 7, 159, 7, 100, 7, 214, 6, 1, 6, 166, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 222, 40, 84, 63, 140, 223, 253, 58, 90, 156, 11, 67, 87, 152, 13, 59, 36, 71, 84, 63, 193, 78, 94, 66, 161, 65, 196, 53, 221, 240, 167, 54, 191, 70, 127, 63, 27, 101, 35, 193, 198, 246, 76, 63, 215, 229, 90, 61, 56, 164, 40, 68, 161, 36, 46, 192, 181, 254, 41, 192, 210, 91, 246, 192, 119, 59, 9, 68, 151, 200, 236, 187, 143, 51, 232, 187, 250, 103, 214, 55, 0, 0, 128, 63, 0, 5, 208, 2, 136, 7, 60, 4, 52, 128, 183, 58, 0, 0, 128, 63, 0, 0, 128, 63, 113, 61, 202, 63, 0, 0, 200, 67, 0, 0, 97, 0, 194, 0, 35, 1, 132, 1, 229, 1, 70, 2, 167, 2, 9, 3, 106, 3, 203, 3, 44, 4, 141, 4, 238, 4, 79, 5, 176, 5, 17, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 60, 0, 20, 0, 236, 255, 30, 0, 137, 0, 227, 0, 217, 0, 87, 0, 116, 255, 200, 254, 228, 254, 12, 0, 254, 1, 8, 4, 248, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 10, 83, 49, 193, 24, 193, 12, 64, 57, 50, 151, 61, 34, 166, 27, 68, 219, 101, 49, 192, 108, 31, 47, 192, 226, 202, 20, 193, 111, 128, 20, 68, 63, 185, 236, 187, 127, 196, 232, 187, 182, 120, 151, 56, 0, 0, 128, 63, 0, 5, 208, 2, 128, 10, 232, 5, 111, 18, 3, 59, 97, 41, 35, 200, 0, 28, 134, 70, 225, 122, 116, 64, 0, 0, 72, 68, 0, 0, 193, 0, 130, 1, 67, 2, 4, 3, 197, 3, 134, 4, 71, 5, 8, 6, 201, 6, 138, 7, 75, 8, 12, 9, 205, 9, 142, 10, 79, 11, 16, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 0, 206, 0, 164, 1, 164, 2, 164, 3, 128, 4, 75, 5, 24, 6, 203, 6, 55, 7, 103, 7, 101, 7, 29, 7, 125, 6, 147, 5, 45, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 92, 76, 83, 63, 219, 87, 192, 58, 228, 243, 13, 67, 143, 67, 17, 59, 78, 102, 83, 63, 15, 126, 99, 66, 120, 91, 208, 53, 215, 154, 151, 54, 44, 79, 
+exif:MaxApertureValue=200/100
+exif:MeteringMode=1
+exif:Model=HTC6995LVW
+exif:Orientation=1
+exif:ResolutionUnit=2
+exif:Saturation=0
+exif:SceneCaptureType=0
+exif:Sharpness=0
+exif:ShutterSpeedValue=-1/1
+exif:Software=Qualcomm JPEG Encoder
+exif:SubSecTimeDigitized=94
+exif:SubSecTimeOriginal=94
+exif:thumbnail:InteroperabilityIndex=R98
+exif:thumbnail:InteroperabilityVersion=48, 49, 48, 48
+exif:WhiteBalance=0
+exif:XResolution=72/1
+exif:YCbCrPositioning=1
+exif:YResolution=72/1
+=============================================
+=============================================
+File: Test_Image.jpg
+---------------------------------------------
+exif:ApertureValue=4845/1918
+exif:BrightnessValue=13509/2882
+exif:ColorSpace=1
+exif:ComponentsConfiguration=1, 2, 3, 0
+exif:DateTime=2016:02:16 06:55:33
+exif:DateTimeDigitized=2016:02:16 06:55:33
+exif:DateTimeOriginal=2016:02:16 06:55:33
+exif:ExifImageLength=2448
+exif:ExifImageWidth=3264
+exif:ExifOffset=204
+exif:ExifVersion=48, 50, 50, 49
+exif:ExposureBiasValue=0/1
+exif:ExposureMode=0
+exif:ExposureProgram=2
+exif:ExposureTime=1/60
+exif:Flash=24
+exif:FlashPixVersion=48, 49, 48, 48
+exif:FNumber=12/5
+exif:FocalLength=103/25
+exif:FocalLengthIn35mmFilm=33
+exif:GPSAltitude=166266/77
+exif:GPSAltitudeRef=0
+exif:GPSDateStamp=2016:02:16
+exif:GPSDestBearing=14951/414
+exif:GPSDestBearingRef=T
+exif:GPSImgDirection=14951/414
+exif:GPSImgDirectionRef=T
+exif:GPSInfo=1014
+exif:GPSLatitude=41/1, 17/1, 5823/100
+exif:GPSLatitudeRef=N
+exif:GPSLongitude=105/1, 36/1, 4353/100
+exif:GPSLongitudeRef=W
+exif:GPSSpeed=0/1
+exif:GPSSpeedRef=K
+exif:GPSTimeStamp=13/1, 55/1, 3236/100
+exif:ISOSpeedRatings=64
+exif:Make=Apple
+exif:MakerNote=65, 112, 112, 108, 101, 32, 105, 79, 83, 0, 0, 1, 77, 77, 0, 8, 0, 1, 0, 9, 0, 0, 0, 1, 0, 0, 0, 4, 0, 3, 0, 7, 0, 0, 0, 104, 0, 0, 0, 116, 0, 4, 0, 9, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0, 9, 0, 0, 0, 1, 0, 0, 0, 190, 0, 6, 0, 9, 0, 0, 0, 1, 0, 0, 0, 187, 0, 7, 0, 9, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0, 10, 0, 0, 0, 3, 0, 0, 0, 220, 0, 20, 0, 9, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 98, 112, 108, 105, 115, 116, 48, 48, 212, 1, 2, 3, 4, 5, 6, 7, 8, 89, 116, 105, 109, 101, 115, 99, 97, 108, 101, 85, 118, 97, 108, 117, 101, 85, 101, 112, 111, 99, 104, 85, 102, 108, 97, 103, 115, 18, 59, 154, 202, 0, 19, 0, 1, 29, 193, 1, 52, 169, 235, 16, 0, 16, 1, 8, 17, 27, 33, 39, 45, 50, 59, 61, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 255, 255, 251, 149, 0, 0, 33, 239, 255, 255, 254, 58, 0, 0, 44, 255, 255, 255, 253, 130, 0, 0, 2, 117
+exif:MeteringMode=5
+exif:Model=iPhone 5
+exif:Orientation=6
+exif:ResolutionUnit=2
+exif:SceneCaptureType=0
+exif:SceneType=1
+exif:SensingMethod=2
+exif:ShutterSpeedValue=4761/806
+exif:Software=9.2.1
+exif:SubjectArea=1631, 1223, 1795, 1077
+exif:SubSecTimeDigitized=470
+exif:SubSecTimeOriginal=470
+exif:thumbnail:Compression=6
+exif:thumbnail:JPEGInterchangeFormat=1418
+exif:thumbnail:JPEGInterchangeFormatLength=3572
+exif:thumbnail:ResolutionUnit=2
+exif:thumbnail:XResolution=72/1
+exif:thumbnail:YResolution=72/1
+exif:WhiteBalance=0
+exif:XResolution=72/1
+exif:YCbCrPositioning=1
+exif:YResolution=72/1
+=============================================

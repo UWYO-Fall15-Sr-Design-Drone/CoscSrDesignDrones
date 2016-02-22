@@ -1,5 +1,5 @@
 !/bin/bash
-#Scott Efird, last updated Feb 8 2016
+#Scott Efird, last updated Feb 22 2016
 
 #This will open a dir, hunt for all the images and then 
 #output all the exif data into a text file. 
@@ -20,18 +20,16 @@ if [ -f $FILE ]; then
 	rm $FILE
 fi
 
-
-
 #Looping through the dir
 for f in *.jpg; do
  	#TODO
 	#Add if statement to check if image.
-	echo "============================================="
+	echo "=============================================">> $FILE 
 	echo "File: $f" >> $FILE
-	echo "---------------------------------------------"
-	string=$(echo identify -format %[exif:*] $f) 
-	echo string >> $FILE
-	echo "============================================="
+	echo "---------------------------------------------">> $FILE 
+	OUTPUT="$(identify -format %[exif:*] $f)"
+	echo "${OUTPUT}" >> $FILE 
+	echo "=============================================">> $FILE 
 done
 #Dumping us back to our home directory
 cd ..
