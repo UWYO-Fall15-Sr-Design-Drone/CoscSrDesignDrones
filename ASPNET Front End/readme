@@ -9,3 +9,6 @@ This could be nifty once we get an image mapped out
 https://developers.google.com/maps/documentation/javascript/examples/groundoverlay-simple
 
 The project is on my source control, ask me if you need me to add you to the project. 
+
+remove brackets and replace three with 3, to stop git scrapers. 
+Not our maps key. "AIzaSyDCejEGPRu2a0Z9J02jJiyJOvZ4d2iYm[THREE (the numb)]I"
