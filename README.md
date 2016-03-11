@@ -1,4 +1,4 @@
-Readme file for the Drone group
+Automated Cartography Solutions (ACS)
 ========================================
 #Use Cases  
 ##Use Case: 1 Automate Flight  
