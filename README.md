@@ -3,7 +3,7 @@ Automated Cartography Solutions (ACS)
 #Use Cases  
 ##Use Case: 1 Automate Flight  
 ###CHARACTERISTIC INFORMATION   
-  
+<hr>
 **Goal in Context:** Have the drone take off, fly up, forward, backwards, rotate, and land in the same spot it took off from    
 **Scope:** Company  
 **Level:** Summary  
