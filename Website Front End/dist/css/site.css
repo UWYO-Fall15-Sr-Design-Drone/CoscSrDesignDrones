@@ -1,0 +1,14 @@
+.test{
+   margin-left: auto;
+   margin-right: auto;
+   background-image: url("Chrysanthemum.jpg");	
+}
+
+body {
+    background-image: url("Chrysanthemum.jpg");	
+}
+
+#map {
+	height: 100%
+	border-style: solid;
+}
