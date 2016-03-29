@@ -42,6 +42,10 @@ Overview: Bashscript to be run by the server to index the images placed in the d
 
 ------------------------------------------------------------------------------------------------
 
+combine_imgs_map.sh
+
+------------------------------------------------------------------------------------------------
+
 dir_img_editSize.sh
 Overview: Bashscript to be run by the server to make sure all the images in the dir are about the same size
 
