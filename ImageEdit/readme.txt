@@ -27,6 +27,21 @@ Program Design Overview:
 	2.	Humanless and dynamic handling of all data passed to it.
 	3.	Stats and data pulled from the Metadata transformed into something human readable
 
++==============================================================================================+
++				Image naming and mapping format:			       +
++											       +
++==============================================================================================+
+Naming Format:
+	1. Images coming from the phone will be stored as a .jpg
+	2. Images will match the namming pattern of "Photo_X_Y.jpg
+		a. Where X is longitude
+		b. Where Y is Latitude
+
+Mapping Format: 
+
+	
+
+
 
 +==============================================================================================+
 +				Current programs breakdown:				       +
@@ -39,6 +54,15 @@ Overview: Bashscript to be run by the server to index the images placed in the d
 	dir_img_list.sh		
 		\---> Creates a text document "dir_content.txt"
 		   \---> If text document already exists, it is removed and then recreated with new information. 
+
+------------------------------------------------------------------------------------------------
+
+combine_imgs_map.sh
+Overview: Bashscript to loop through all the images mapping the set pattern and then combining them into a master img
+	\---> Note, see image format above
+	
+	combine_imgs_map.sh
+		\--->Finds all the images that match our pattern
 
 ------------------------------------------------------------------------------------------------
 
