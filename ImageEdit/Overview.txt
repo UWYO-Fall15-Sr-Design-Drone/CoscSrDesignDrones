@@ -43,6 +43,11 @@ Overview: Bashscript to be run by the server to index the images placed in the d
 ------------------------------------------------------------------------------------------------
 
 combine_imgs_map.sh
+Overview: Bashscript to loop through all the images mapping the set pattern and then combining them into a master img
+	\---> Note, see image format above
+	
+	combine_imgs_map.sh
+		\--->Finds all the images that match our pattern
 
 ------------------------------------------------------------------------------------------------
 
