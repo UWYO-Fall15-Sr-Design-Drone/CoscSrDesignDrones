@@ -27,6 +27,21 @@ Program Design Overview:
 	2.	Humanless and dynamic handling of all data passed to it.
 	3.	Stats and data pulled from the Metadata transformed into something human readable
 
++==============================================================================================+
++				Image naming and mapping format:			       +
++											       +
++==============================================================================================+
+Naming Format:
+	1. Images coming from the phone will be stored as a .jpg
+	2. Images will match the namming pattern of "Photo_X_Y.jpg
+		a. Where X is longitude
+		b. Where Y is Latitude
+
+Mapping Format: 
+
+	
+
+
 
 +==============================================================================================+
 +				Current programs breakdown:				       +
