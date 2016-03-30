@@ -8,11 +8,16 @@ clear
 
 #The directory we are looking in
 DIR="/home/waffles/git-repos/CoscSrDesignDrones/ImageEdit/Images"
-
+cd $DIR
 
 #Looping through the dir
-for f in $DIR/*
+for f in *.jpg; do
 do
+  echo f
 
 
+
+done
 #First we will loop through the dir looking for images that match the pattern
+
+cd ..
