@@ -36,12 +36,11 @@ Naming Format:
 	2. Images will match the namming pattern of "Photo_X_Y.jpg
 		a. Where X is longitude
 		b. Where Y is Latitude
+	3. The X and Y values start at 1, 1. 
 
 Mapping Format: 
-
-	
-
-
+	1. The first image in the grid is lcoated in the lower left corner
+	2. The next image will follow to the right of that image until the Y increases
 
 +==============================================================================================+
 +				Current programs breakdown:				       +
