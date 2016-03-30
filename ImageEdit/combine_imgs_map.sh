@@ -10,4 +10,9 @@ clear
 DIR="/home/waffles/git-repos/CoscSrDesignDrones/ImageEdit/Images"
 
 
+#Looping through the dir
+for f in $DIR/*
+do
+
+
 #First we will loop through the dir looking for images that match the pattern
