@@ -13,7 +13,7 @@ Automated Cartography Solutions (ACS)
 **Primary Actor:** Drone, APX flight controller board.     
 **Trigger:** Button on RC Controller is toggled on.    
   
-  
+  https://www.youtube.com/watch?v=VVyR8t6CC6g&feature=youtu.be
 ###MAIN SUCCESS SCENARIO   
       1.  	Button is toggled on.  
       2. 	Drone initiates startup check.  
