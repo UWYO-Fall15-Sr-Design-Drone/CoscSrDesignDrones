@@ -15,6 +15,16 @@ Automated Cartography Solutions (ACS)
   
   https://www.youtube.com/watch?v=VVyR8t6CC6g&feature=youtu.be
   talk on hacking drones https://www.youtube.com/watch?v=5CzURm7OpAA
+  
+  -------------------------------------------
+  Log Files, Helpful Links
+http://www.rcgroups.com/forums/showthread.php?t=2151318 
+https://m.youtube.com/watch?v=ThVUXxOGHAE 
+http://ardupilot.org/copter/docs/common-mission-planner-telemetry-logs.html 
+
+Words of advice. In Mission Planner you can download the logs through the home screen, we do NOT need to go through the console window to get them.
+
+  
 ###MAIN SUCCESS SCENARIO   
       1.  	Button is toggled on.  
       2. 	Drone initiates startup check.  
