@@ -14,7 +14,6 @@ Automated Cartography Solutions (ACS)
 **Trigger:** Button on RC Controller is toggled on.    
   
   https://www.youtube.com/watch?v=VVyR8t6CC6g&feature=youtu.be
-  talk on hacking drones https://www.youtube.com/watch?v=5CzURm7OpAA
   
   -------------------------------------------
   Log Files, Helpful Links
