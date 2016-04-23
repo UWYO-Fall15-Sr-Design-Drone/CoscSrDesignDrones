@@ -1,0 +1,23 @@
+what do we need:
+
+**From Gamboa
+General
+- Define purpose better - Why did we do the shit we did
+- Explain why you picked the drone- Break up ACS app into multiple pages
+
+ACS App
+- Add photos/vones of drone actually working
+- Demo of mapping app
+
+**Us 
+Need updates website
+Make 1 server, not two
+
+Get legs on drone so phone doesnt make it wobble
+Fix all blades
+Fix all zip-ties
+
+
+
+
+ 
