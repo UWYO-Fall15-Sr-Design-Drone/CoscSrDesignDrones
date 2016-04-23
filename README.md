@@ -21,6 +21,9 @@ http://www.rcgroups.com/forums/showthread.php?t=2151318
 https://m.youtube.com/watch?v=ThVUXxOGHAE 
 http://ardupilot.org/copter/docs/common-mission-planner-telemetry-logs.html 
 
+-- Important Read
+http://ardupilot.org/copter/docs/auto-mode.html#auto-mode 
+
 Words of advice. In Mission Planner you can download the logs through the home screen, we do NOT need to go through the console window to get them.
 
   
