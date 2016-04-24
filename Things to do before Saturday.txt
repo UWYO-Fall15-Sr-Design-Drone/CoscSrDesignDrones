@@ -2,19 +2,20 @@ what do we need:
 
 **From Gamboa
 General
-- Define purpose better - Why did we do the shit we did
-- Explain why you picked the drone- Break up ACS app into multiple pages
+- Define purpose better - Why did we do the shit we did - Done
+- Explain why you picked the drone- Break up ACS app into multiple pages - Done
 
 ACS App
-- Add photos/videos of drone actually working
-- Demo of mapping app
+- Add photos/videos of drone actually working - Jake
+- Demo of mapping app - Jake
 
 **Us 
-Need updates website
-Make 1 server, not two
+Need updates website - Sam/Scott
+Make 1 server, not two - Scott/Jake(get info)
 
-Drone crash composition 
 
-Get legs on drone so phone doesn’t make it wobble
-Fix all blades
-Fix all zip-ties
+Drone crash composition - Jake
+
+Get legs on drone so phone doesn’t make it wobble - Sam
+Fix all blades - Sam
+Fix all zip-ties - DONE
