@@ -16,6 +16,6 @@ Make 1 server, not two - Scott/Jake(get info)
 
 Drone crash composition - Jake
 
-Get legs on drone so phone doesn’t make it wobble - Sam
-Fix all blades - Sam
+Get legs on drone so phone doesnâ€™t make it wobble - Sam - Done
+Fix all blades - Sam - Done
 Fix all zip-ties - DONE
