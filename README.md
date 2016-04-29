@@ -21,6 +21,7 @@ Automated Cartography Solutions (ACS)
 -- Important Read
 
 http://ardupilot.org/copter/docs/auto-mode.html#auto-mode 
+
 http://ardupilot.org/copter/docs/common-mission-planner-telemetry-logs.html 
 
 Words of advice. In Mission Planner you can download the logs through the home screen, we do NOT need to go through the console window to get them.
