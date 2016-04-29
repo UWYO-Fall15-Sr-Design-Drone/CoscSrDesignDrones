@@ -12,17 +12,15 @@ Automated Cartography Solutions (ACS)
 **Failed End Condition:** Drone needs retrieval, everyone drinks sadly.    
 **Primary Actor:** Drone, APX flight controller board.     
 **Trigger:** Button on RC Controller is toggled on.    
-  
-  https://www.youtube.com/watch?v=VVyR8t6CC6g&feature=youtu.be
+
   
   -------------------------------------------
-  Log Files, Helpful Links
-http://www.rcgroups.com/forums/showthread.php?t=2151318 
-https://m.youtube.com/watch?v=ThVUXxOGHAE 
-http://ardupilot.org/copter/docs/common-mission-planner-telemetry-logs.html 
+
+
 
 -- Important Read
 http://ardupilot.org/copter/docs/auto-mode.html#auto-mode 
+http://ardupilot.org/copter/docs/common-mission-planner-telemetry-logs.html 
 
 Words of advice. In Mission Planner you can download the logs through the home screen, we do NOT need to go through the console window to get them.
 
