@@ -19,6 +19,7 @@ Automated Cartography Solutions (ACS)
 
 
 -- Important Read
+
 http://ardupilot.org/copter/docs/auto-mode.html#auto-mode 
 http://ardupilot.org/copter/docs/common-mission-planner-telemetry-logs.html 
 
