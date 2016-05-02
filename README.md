@@ -150,5 +150,5 @@ Mission Statement:
 			
 Helpful sites:
 http://www.xheli.com/05p-flightcontrol-mega-mx.html<br>
-http://diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/
-http://playground.arduino.cc/Linux/All#Permission
+http://diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/<br>
+http://playground.arduino.cc/Linux/All#Permission<br>
