@@ -149,6 +149,6 @@ Mission Statement:
 			Overlay large image onto google maps
 			
 Helpful sites:
-http://www.xheli.com/05p-flightcontrol-mega-mx.html
+http://www.xheli.com/05p-flightcontrol-mega-mx.html<br>
 http://diyhacking.com/arduino-mpu-6050-imu-sensor-tutorial/
 http://playground.arduino.cc/Linux/All#Permission
