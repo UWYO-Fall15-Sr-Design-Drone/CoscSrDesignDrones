@@ -1,0 +1,46 @@
+<!--
+    https://developers.google.com/maps/documentation/javascript/tutorial
+    https://www.youtube.com/watch?v=6RdrGWWc_4s
+
+    -->
+
+<ion-view>
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-title>{{pageTitle}}</ion-nav-title>
+
+        <ion-nav-buttons side="left" class="left-buttons">
+            <button class="button button-icon icon button-icon ion-arrow-left-a" ng-click="goBack()"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right" class="right-buttons">
+            <button class="button button-icon icon ion-ios-information-outline" ng-click="goToAboutPage()"></button>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <ion-content class="has-header">
+        <!--<div id="map_canvas">-->
+            <!--<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options"></ui-gmap-google-map>-->
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+        <!--</div>-->
+
+        <div id="map_canvas" ng-controller="MappingPageCtrl">
+            <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+                </ui-gmap-marker>
+                <ui-gmap-rectangle draggable="true" bounds="bounds" fill="'#FFFFFF .5'"></ui-gmap-rectangle>
+            </ui-gmap-google-map>
+            <div ng-cloak>
+                <ul>
+                    <li>coords update ctr: {{coordsUpdates}}</li>
+                    <li>dynamic move ctr: {{dynamicMoveCtr}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bar bar-footer bar-dark">
+            <button class="button button-clear ion-android-locate" ng-click="refreshLocation()"> Recenter</button>
+            <div class="title"></div>
+            <button class="button button-clear  ion-plane" ng-click="saveAndFly()"> Save and Fly!</button>
+        </div>
+    </ion-content>
+
+</ion-view>

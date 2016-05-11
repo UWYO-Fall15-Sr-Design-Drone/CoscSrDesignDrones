@@ -1,0 +1,21 @@
+<ion-view view-title="Flight Photos" align-title="center">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon icon ion-arrow-left-a" ng-click="goBack()"></button>
+    </ion-nav-buttons>
+
+    <ion-content style="background-color:black;" ng-controller="PhotoUploadsPageCtrl" ng-init="loadImages()">
+
+
+        <button class="button button-block button-assertive alert ion-alert-circled" ng-click="uploadData()">
+            Click Here to Upload Photos!
+        </button>
+        <ion-list id="aspect">
+            <ion-item id="liFake" class="button button-icon" collection-repeat="image in images">
+                <img ng-src="{{image.src}}" width="100%" height="100%" />
+            </ion-item>
+        </ion-list>
+        <p id="noMorePhotosToLoad" ng-show="!canMorePhotosBeLoaded()" style="color:white; text-align:center;"> </p>
+        <ion-infinite-scroll ng-if="canMorePhotosBeLoaded() == 1" on-infinite="loadMorePhotos()" distance="30%"></ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

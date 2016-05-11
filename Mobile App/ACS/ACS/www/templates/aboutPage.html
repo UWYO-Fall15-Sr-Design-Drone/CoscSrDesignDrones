@@ -1,0 +1,16 @@
+<ion-view>
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-title>{{pageTitle}}</ion-nav-title>
+
+        <ion-nav-buttons side="left" class="left-buttons">
+            <button class="button button-icon icon button-icon ion-arrow-left-a" ng-click="goBack()"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right" class="right-buttons">
+            <button class="button button-icon icon ion-ios-information-outline" ng-click="goToAboutPage()"></button>
+        </ion-nav-buttons>
+
+    </ion-nav-bar>
+    <ion-content>
+        <button calss="button button-full" ng-click="CaptureBCK()">Start The Picture Taking!</button>
+    </ion-content>
+</ion-view>

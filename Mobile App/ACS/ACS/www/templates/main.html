@@ -1,0 +1,58 @@
+<!-- Main should hold things we want to show on every page. In our case it will be the navigation bar with the side menu. I am having issues working with the side menu
+    and will look at the posiblity of doing either a drop down menu (harder to do), doing a new page entirely of all the links(not something I want,
+    but maybe make it the apps landing page?), or working more with side menus (something I want to do)
+    -->
+<!--<ion-nav-bar class="bar-dark">
+    <ion-nav-back-button class="button-icon ion-arrow-left-a">
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-nav-buttons side="right" class="right-buttons">
+    <button class="button button-icon icon ion-beer"></button>
+</ion-nav-buttons>
+<ion-nav-view name="main-view"></ion-nav-view>-->
+
+
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-dark">
+        </ion-nav-bar>
+        <ion-nav-view name="main-view">
+        </ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="right">
+        <ion-header-bar class="bar-dark">
+            <h1 class="title">Menu</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item ng-click="closeMenu()" href="#/main/aboutPage">
+                    About
+                </ion-item>
+                <ion-item ng-click="closeMenu()" href="#/main/signInPage">
+                    Sign In
+                </ion-item>
+                <ion-item ng-click="closeMenu()" ng-show="userValid() || userInfo.isDemo" href="#/main/setupPage">
+                    Setup
+                </ion-item>
+                <!--<ion-item ng-click="closeMenu()"href="#/main/spanSelectionPage">
+                    Instrument Selection
+                </ion-item>
+                <ion-item ng-click="closeMenu()"href="#/main/coaSearchPage">
+                    COA Search
+                </ion-item>
+                <ion-item ng-click="closeMenu()"href="#/main/instrumentCalibrationPage">
+                     Calibration
+                </ion-item>
+                <ion-item ng-click="closeMenu()"href="#/main/instrumentDriftAssessmentPage">
+                    Assessment
+                </ion-item>
+                <ion-item ng-click="closeMenu()"href="#/main/coaAddEditPage">
+                    COA Add/Edit
+                </ion-item>-->
+                <ion-item ng-click="closeMenu()" ng-show="userValid() || userInfo.isDemo" href="#/main/uploadPage">
+                    Upload
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
